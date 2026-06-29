@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+/* Thin scrollbar throughout */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #334155; }
+
+/* Text selection */
+::selection { background: #3b82f630; color: #e2e8f0; }
