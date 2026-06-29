@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 
 export default function DayNotes({ dayKey, value, onChange }) {
-  const [local, setLocal]     = useState(value ?? '');
-  const [saved, setSaved]     = useState(false);
+  const [local, setLocal] = useState(value ?? '');
+  const [saved, setSaved] = useState(false);
 
-  // Sync if parent value changes (e.g. loaded from Firestore)
   useEffect(() => { setLocal(value ?? ''); }, [value]);
 
   const handleChange = (e) => {
@@ -13,7 +12,6 @@ export default function DayNotes({ dayKey, value, onChange }) {
     setSaved(false);
   };
 
-  // Show "Saved" briefly after 1.7s (slightly after the 1.5s debounce fires)
   useEffect(() => {
     if (local === (value ?? '')) return;
     const t = setTimeout(() => setSaved(true), 1700);
@@ -23,7 +21,7 @@ export default function DayNotes({ dayKey, value, onChange }) {
   return (
     <div className="mt-2">
       <div className="flex items-center justify-between mb-1.5">
-        <span className="text-xs text-gray-600 font-medium">Notes</span>
+        <span className="text-xs font-medium" style={{ color: 'var(--text-3)' }}>Notes</span>
         {saved && <span className="text-xs text-green-500 animate-pulse">Saved</span>}
       </div>
       <textarea
@@ -31,10 +29,14 @@ export default function DayNotes({ dayKey, value, onChange }) {
         onChange={handleChange}
         placeholder="Add notes for this day…"
         rows={3}
-        className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-3 py-2
-                   text-sm text-gray-300 placeholder-gray-700
-                   focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600/30
-                   resize-none transition-colors"
+        className="w-full rounded-lg px-3 py-2 text-sm resize-none transition-colors
+                   focus:outline-none focus:ring-1"
+        style={{
+          background: 'var(--bg-raised)',
+          border: '1px solid var(--border)',
+          color: 'var(--text-2)',
+          '--tw-ring-color': '#3b82f650',
+        }}
       />
     </div>
   );

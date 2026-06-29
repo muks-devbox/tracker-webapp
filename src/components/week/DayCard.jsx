@@ -12,7 +12,7 @@ const DAY_META = {
   sat: { label: 'SAT', time: '4h'      },
 };
 
-export default function DayCard({ day, monthColor = '#3b82f6' }) {
+export default function DayCard({ day, monthColor = '#3b82f6', monthLight = '#eff6ff', monthLightBorder = '#bfdbfe' }) {
   const [open, setOpen] = useState(false);
   const { progress, updateNotes } = useProgress();
   const meta    = DAY_META[day.dayShort] || { label: day.dayShort.toUpperCase(), time: '' };
@@ -25,91 +25,91 @@ export default function DayCard({ day, monthColor = '#3b82f6' }) {
   return (
     <div className="rounded-xl overflow-hidden transition-all duration-200"
       style={{
-        background: '#0d1117',
-        border: `1px solid ${allDone ? monthColor + '50' : open ? '#1e293b' : '#161b27'}`,
-        boxShadow: open ? `inset 0 0 0 1px ${monthColor}15` : 'none',
+        background: 'var(--bg-base)',
+        border: `1px solid ${allDone ? monthColor + '60' : open ? 'var(--border)' : 'var(--border-faint)'}`,
+        boxShadow: open ? 'var(--shadow-raised)' : 'var(--shadow-card)',
       }}>
 
-      <button onClick={() => setOpen(o => !o)}
-        className="w-full flex items-center gap-3 px-4 py-3 text-left
-                   hover:bg-white/[0.02] transition-colors">
+      <button
+        onClick={() => setOpen(o => !o)}
+        className="w-full flex items-center gap-3 px-4 py-3.5 text-left transition-colors"
+        style={{ background: open ? 'var(--bg-raised)' : 'transparent' }}>
 
-        {/* Left accent bar */}
-        <div className="w-0.5 h-8 rounded-full shrink-0 transition-all duration-300"
-          style={{ background: allDone ? monthColor : open ? monthColor + '60' : '#1e293b' }} />
+        {/* Accent bar */}
+        <div className="w-1 h-9 rounded-full shrink-0 transition-all duration-300"
+          style={{ background: allDone ? monthColor : open ? monthColor : 'var(--border-strong)' }} />
 
         {/* Day badge */}
-        <div className="w-9 h-8 rounded-lg flex items-center justify-center shrink-0"
+        <div className="w-10 h-9 rounded-lg flex items-center justify-center shrink-0"
           style={{
-            background: allDone ? monthColor + '18' : '#111827',
-            border: `1px solid ${allDone ? monthColor + '40' : '#1e293b'}`,
+            background: allDone ? monthLight : open ? monthLight : 'var(--bg-raised)',
+            border: `1.5px solid ${allDone ? monthLightBorder : open ? monthLightBorder : 'var(--border)'}`,
           }}>
           <span className="text-[9px] font-bold font-mono tracking-wider"
-            style={{ color: allDone ? monthColor : '#475569' }}>
+            style={{ color: allDone || open ? monthColor : 'var(--text-3)' }}>
             {meta.label}
           </span>
         </div>
 
-        {/* Title + progress segments */}
+        {/* Content */}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <span className={`text-sm font-medium leading-none ${
-              allDone ? 'text-white' : 'text-slate-300'
-            }`}>
+            <span className="text-sm font-semibold"
+              style={{ color: allDone ? monthColor : 'var(--text-1)' }}>
               {day.dayName}
             </span>
             {meta.time && (
-              <span className="text-[10px] text-slate-700 font-mono bg-slate-900 rounded
-                               px-1.5 py-0.5 border border-slate-800/80">
+              <span className="text-[10px] font-mono rounded-md px-1.5 py-0.5"
+                style={{ color: 'var(--text-3)', background: 'var(--bg-overlay)',
+                         border: '1px solid var(--border)' }}>
                 {meta.time}
               </span>
             )}
           </div>
-          {/* Task segment dots */}
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1.5">
             <div className="flex gap-[3px]">
               {tasks.slice(0, 15).map((t, i) => (
-                <div key={i} className="w-1.5 h-1 rounded-full transition-colors duration-300"
-                  style={{ background: dayData.tasks?.[t.id] ? monthColor : '#1e293b' }} />
+                <div key={i} className="w-1.5 h-1.5 rounded-full transition-colors duration-300"
+                  style={{ background: dayData.tasks?.[t.id] ? monthColor : 'var(--border)' }} />
               ))}
               {tasks.length > 15 && (
-                <span className="text-[9px] text-slate-700 ml-0.5 font-mono">
+                <span className="text-[9px] font-mono ml-0.5" style={{ color: 'var(--text-4)' }}>
                   +{tasks.length - 15}
                 </span>
               )}
             </div>
-            <span className="text-[10px] text-slate-700 font-mono ml-1">
+            <span className="text-[10px] font-mono" style={{ color: 'var(--text-3)' }}>
               {done}/{tasks.length}
             </span>
           </div>
         </div>
 
-        {/* Right: pct + chevron */}
-        <div className="flex items-center gap-2 shrink-0">
+        {/* Right */}
+        <div className="flex items-center gap-2.5 shrink-0">
           <span className="text-xs font-bold font-mono tabular-nums"
-            style={{ color: allDone ? monthColor : pct > 0 ? '#64748b' : '#1e293b' }}>
-            {pct}%
+            style={{ color: allDone ? monthColor : pct > 0 ? monthColor + 'cc' : 'var(--text-4)' }}>
+            {pct > 0 ? `${pct}%` : '—'}
           </span>
-          <svg className={`w-3.5 h-3.5 text-slate-700 transition-transform duration-200
-                           ${open ? 'rotate-180' : ''}`}
-            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
+          <div className="w-6 h-6 rounded-full flex items-center justify-center"
+            style={{ background: 'var(--bg-overlay)', border: '1px solid var(--border)' }}>
+            <svg className={`w-3 h-3 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+              fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              style={{ color: 'var(--text-3)' }}>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
         </div>
       </button>
 
       {open && (
-        <div className="px-4 pb-5 pt-2"
-          style={{ borderTop: `1px solid ${monthColor}20` }}>
-          <div className="pl-[52px] space-y-5 pt-2">
+        <div className="px-4 pb-5 pt-3"
+          style={{ borderTop: `2px solid ${monthColor}20` }}>
+          <div className="pl-[56px] space-y-5">
             {day.sections.map((section, si) => (
               <SectionBlock key={si} section={section} dayKey={day.dayKey} />
             ))}
-            <DayNotes
-              dayKey={day.dayKey}
-              value={dayData.notes ?? ''}
-              onChange={(n) => updateNotes(day.dayKey, n)}
-            />
+            <DayNotes dayKey={day.dayKey} value={dayData.notes ?? ''}
+              onChange={n => updateNotes(day.dayKey, n)} />
           </div>
         </div>
       )}

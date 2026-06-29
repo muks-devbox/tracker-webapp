@@ -4,32 +4,42 @@ export default function LoginPage() {
   const { signIn, authError } = useAuth();
 
   return (
-    <div className="min-h-screen bg-gray-950 flex items-center justify-center">
-      <div className="bg-gray-900 border border-gray-800 rounded-2xl p-10 w-full max-w-sm text-center">
+    <div className="min-h-screen flex items-center justify-center"
+      style={{ background: 'var(--bg-app)' }}>
+      <div className="w-full max-w-sm rounded-2xl p-10 text-center"
+        style={{ background: 'var(--bg-base)', border: '1px solid var(--border)' }}>
 
         <div className="text-4xl mb-4">🎯</div>
-        <h1 className="text-xl font-semibold text-white mb-1">
+        <h1 className="text-xl font-semibold mb-1" style={{ color: 'var(--text-1)' }}>
           Interview Prep Tracker
         </h1>
-        <p className="text-gray-400 text-sm mb-8">
+        <p className="text-sm mb-8" style={{ color: 'var(--text-3)' }}>
           16-Week Senior Java Backend Roadmap
         </p>
 
         {authError && (
-          <div className="bg-red-900/40 border border-red-700 text-red-300 text-sm rounded-lg px-4 py-3 mb-6">
+          <div className="text-sm rounded-lg px-4 py-3 mb-6"
+            style={{ background: 'var(--tag-hard-bg, #fef2f2)',
+                     color: 'var(--tag-hard-text, #dc2626)',
+                     border: '1px solid var(--tag-hard-border, #fecaca)' }}>
             {authError}
           </div>
         )}
 
         <button
           onClick={signIn}
-          className="w-full flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-gray-900 font-medium py-3 px-4 rounded-xl transition-colors cursor-pointer"
+          className="w-full flex items-center justify-center gap-3 font-medium
+                     py-3 px-4 rounded-xl transition-colors cursor-pointer"
+          style={{ background: 'var(--bg-raised)', color: 'var(--text-1)',
+                   border: '1px solid var(--border)' }}
+          onMouseEnter={e => e.currentTarget.style.background = 'var(--bg-overlay)'}
+          onMouseLeave={e => e.currentTarget.style.background = 'var(--bg-raised)'}
         >
           <GoogleIcon />
           Sign in with Google
         </button>
 
-        <p className="text-gray-600 text-xs mt-6">
+        <p className="text-xs mt-6" style={{ color: 'var(--text-4)' }}>
           Single-user app — only your account can access this.
         </p>
       </div>
