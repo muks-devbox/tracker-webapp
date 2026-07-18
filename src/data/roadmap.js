@@ -1,6 +1,6 @@
-// roadmap.js — Auto-generated from Study_Roadmap_Revised_v2.md (v3 — real Week 4 Sunday)
-// 16 weeks × 7 days = 112 days | 1436 tasks | LC:160 | HLD:47 | LLD:18 | STAR:31
-// DO NOT EDIT BY HAND — re-run the parser if the markdown changes
+// roadmap.js — Auto-generated from Study_Roadmap_Revised_v2.md (v5 — all parser bugs fixed)
+// Fixes: LLD section headers, combined-header ID dedup, appendix exclusion
+// 16 weeks × 7 days = 112 days | 1298 tasks | LC:160 | HLD:43 | LLD:17 | STAR:28
 // Task ID scheme: w{weekNum}-{dayShort}-s{sectionIdx}-t{taskIdx}
 
 export const roadmap = {
@@ -9,11 +9,11 @@ export const roadmap = {
     subtitle: "Revised v2 — 4 months, 16 weeks",
     totalWeeks: 16,
     totalMonths: 4,
-    totalTasks: 1436,
+    totalTasks: 1298,
     lcProblems: 160,
-    hldDesigns: 47,
-    lldDesigns: 18,
-    starStories: 31,
+    hldDesigns: 43,
+    lldDesigns: 17,
+    starStories: 28,
   },
   weeks: [
   {
@@ -611,7 +611,12 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w01-sat-s2-t3"
-              },
+              }
+            ]
+          },
+          {
+            "title": "HLD — Reading: Scale from Zero to Millions of Users",
+            "tasks": [
               {
                 "text": "Read ByteByteGo System Design 101 — \"Scale from Zero\" chapter (GitHub: ByteByteGoHq/system-design-101)",
                 "tags": [
@@ -619,49 +624,49 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sat-s2-t4"
+                "id": "w01-sat-s3-t0"
               },
               {
                 "text": "Structured notes to take:",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sat-s2-t5"
+                "id": "w01-sat-s3-t1"
               },
               {
                 "text": "Vertical vs horizontal scaling — when each hits its ceiling",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sat-s2-t6"
+                "id": "w01-sat-s3-t2"
               },
               {
                 "text": "Load balancer role, stateless server requirement",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sat-s2-t7"
+                "id": "w01-sat-s3-t3"
               },
               {
                 "text": "Database replication: primary-replica, read replicas",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sat-s2-t8"
+                "id": "w01-sat-s3-t4"
               },
               {
                 "text": "Cache: cache-aside pattern, TTL basics, CDN for static assets",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sat-s2-t9"
+                "id": "w01-sat-s3-t5"
               },
               {
                 "text": "Goal: by end, sketch a \"Scale from Zero\" architecture diagram from memory",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sat-s2-t10"
+                "id": "w01-sat-s3-t6"
               }
             ]
           }
@@ -674,7 +679,7 @@ export const roadmap = {
         "isSunday": true,
         "sections": [
           {
-            "title": "Tasks",
+            "title": "DSA Re-Solve (no hints)",
             "tasks": [
               {
                 "text": "Re-solve LeetCode #1 (Two Sum) from scratch",
@@ -693,104 +698,114 @@ export const roadmap = {
                 "leetcodeNum": 3,
                 "difficulty": null,
                 "id": "w01-sun-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Tech Self-Quiz",
+            "tasks": [
               {
                 "text": "Q1: What is the difference between map() and flatMap() in Streams? Code example.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t2"
+                "id": "w01-sun-s1-t0"
               },
               {
                 "text": "Q2: When is orElseGet() preferred over orElse()? Why specifically?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t3"
+                "id": "w01-sun-s1-t1"
               },
               {
                 "text": "Q3: What does the compact constructor in a Record do? Where would you use it?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t4"
+                "id": "w01-sun-s1-t2"
               },
               {
                 "text": "Q4: Can you use var for a field? For a lambda parameter? Why not?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t5"
+                "id": "w01-sun-s1-t3"
               },
               {
                 "text": "Q5: In Longest Repeating Character Replacement — what is the exact shrink condition and why?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t6"
+                "id": "w01-sun-s1-t4"
               },
               {
                 "text": "Q6: What is a sealed class? How does it enable exhaustive switch?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t7"
-              },
+                "id": "w01-sun-s1-t5"
+              }
+            ]
+          },
+          {
+            "title": "Cheat Sheet — Week 1",
+            "tasks": [
               {
                 "text": "Java 8: Streams, Lambdas, Optional, Functional Interfaces, Default interface methods",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t8"
+                "id": "w01-sun-s2-t0"
               },
               {
                 "text": "Java 9: Collection factories (List.of), Module system concept, Optional additions",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t9"
+                "id": "w01-sun-s2-t1"
               },
               {
                 "text": "Java 10: var (local only)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t10"
+                "id": "w01-sun-s2-t2"
               },
               {
                 "text": "Java 11: String methods (isBlank/strip/lines/repeat), stable HTTP Client",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t11"
+                "id": "w01-sun-s2-t3"
               },
               {
                 "text": "Java 14: Switch expressions (arrow syntax, yield)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t12"
+                "id": "w01-sun-s2-t4"
               },
               {
                 "text": "Java 15: Text blocks",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t13"
+                "id": "w01-sun-s2-t5"
               },
               {
                 "text": "Java 16: Records, instanceof pattern matching",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t14"
+                "id": "w01-sun-s2-t6"
               },
               {
                 "text": "Java 17: Sealed classes, Pattern matching for switch (preview)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t15"
+                "id": "w01-sun-s2-t7"
               },
               {
                 "text": "Java 21: Virtual Threads, Structured Concurrency, Sequenced Collections, Pattern matching switch (final)",
@@ -799,8 +814,13 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t16"
-              },
+                "id": "w01-sun-s2-t8"
+              }
+            ]
+          },
+          {
+            "title": "Plan Week 2",
+            "tasks": [
               {
                 "text": "Skim Monday: Thread lifecycle and synchronized. Concurrency starts here.",
                 "tags": [
@@ -808,7 +828,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w01-sun-s0-t17"
+                "id": "w01-sun-s3-t0"
               }
             ]
           }
@@ -1531,41 +1551,46 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w02-sat-s2-t5"
-              },
+              }
+            ]
+          },
+          {
+            "title": "LLD #1 — Design a Parking Lot",
+            "tasks": [
               {
                 "text": "Requirements: multi-level, vehicle types (Bike, Car, Truck), different spot sizes, fee calculation, entry/exit tickets",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sat-s2-t6"
+                "id": "w02-sat-s3-t0"
               },
               {
                 "text": "Classes: ParkingLot (Singleton), Level, ParkingSpot, Vehicle (abstract + subclasses), Ticket, FeeCalculator, EntryGate, ExitGate",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sat-s2-t7"
+                "id": "w02-sat-s3-t1"
               },
               {
                 "text": "Patterns: Strategy (FeeCalculator: HourlyStrategy, DailyStrategy), Factory (Vehicle creation), State (SpotStatus: AVAILABLE/OCCUPIED/RESERVED)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sat-s2-t8"
+                "id": "w02-sat-s3-t2"
               },
               {
                 "text": "Code: park(Vehicle v) — find nearest available spot of right size → create Ticket; unpark(Ticket t) — calculate fee with Strategy → mark spot available",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sat-s2-t9"
+                "id": "w02-sat-s3-t3"
               },
               {
                 "text": "Extension: add WaitingQueue for full lot; VIP spot reservation",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sat-s2-t10"
+                "id": "w02-sat-s3-t4"
               }
             ]
           }
@@ -1578,7 +1603,7 @@ export const roadmap = {
         "isSunday": true,
         "sections": [
           {
-            "title": "Tasks",
+            "title": "DSA Re-Solve",
             "tasks": [
               {
                 "text": "Re-solve LeetCode #33 (Rotated Array Search) — trace manually before coding",
@@ -1597,13 +1622,18 @@ export const roadmap = {
                 "leetcodeNum": 875,
                 "difficulty": null,
                 "id": "w02-sun-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Tech Self-Quiz",
+            "tasks": [
               {
                 "text": "Q1: Thread states — what is the difference between BLOCKED and WAITING?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sun-s0-t2"
+                "id": "w02-sun-s1-t0"
               },
               {
                 "text": "Q2: Explain happens-before with a volatile example in code.",
@@ -1612,7 +1642,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sun-s0-t3"
+                "id": "w02-sun-s1-t1"
               },
               {
                 "text": "Q3: When is volatile NOT sufficient? Give a concrete code example.",
@@ -1621,42 +1651,47 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sun-s0-t4"
+                "id": "w02-sun-s1-t2"
               },
               {
                 "text": "Q4: thenApply() vs thenCompose() — write a code example showing the difference.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sun-s0-t5"
+                "id": "w02-sun-s1-t3"
               },
               {
                 "text": "Q5: What replaced PermGen in Java 8? What are the implications for memory configuration?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sun-s0-t6"
+                "id": "w02-sun-s1-t4"
               },
               {
                 "text": "Q6: Explain G1GC region-based approach vs classic generational GC.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sun-s0-t7"
+                "id": "w02-sun-s1-t5"
               },
               {
                 "text": "Q7: When would you recommend ZGC over G1GC?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sun-s0-t8"
-              },
+                "id": "w02-sun-s1-t6"
+              }
+            ]
+          },
+          {
+            "title": "Cheat Sheet — Week 2",
+            "tasks": [
               {
                 "text": "Thread states + transitions (draw the state machine)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sun-s0-t9"
+                "id": "w02-sun-s2-t0"
               },
               {
                 "text": "synchronized: object-level vs class-level, wait/notify rules",
@@ -1665,7 +1700,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sun-s0-t10"
+                "id": "w02-sun-s2-t1"
               },
               {
                 "text": "volatile: visibility only, NOT atomicity; when sufficient",
@@ -1674,36 +1709,41 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sun-s0-t11"
+                "id": "w02-sun-s2-t2"
               },
               {
                 "text": "ExecutorService: 4 factory methods + their use cases",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sun-s0-t12"
+                "id": "w02-sun-s2-t3"
               },
               {
                 "text": "CompletableFuture: thenApply vs thenCompose vs thenCombine vs allOf vs anyOf",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sun-s0-t13"
+                "id": "w02-sun-s2-t4"
               },
               {
                 "text": "JVM Memory: Heap regions, Metaspace, Stack, PC Register",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sun-s0-t14"
+                "id": "w02-sun-s2-t5"
               },
               {
                 "text": "GC: Minor (Young) vs Major (Old) vs Full; G1GC vs ZGC",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sun-s0-t15"
-              },
+                "id": "w02-sun-s2-t6"
+              }
+            ]
+          },
+          {
+            "title": "Plan Week 3",
+            "tasks": [
               {
                 "text": "Skim Monday: ReentrantLock — when and why to use it over synchronized",
                 "tags": [
@@ -1711,7 +1751,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w02-sun-s0-t16"
+                "id": "w02-sun-s3-t0"
               }
             ]
           }
@@ -2382,41 +2422,46 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w03-sat-s2-t3"
-              },
+              }
+            ]
+          },
+          {
+            "title": "LLD #2 — Design a Library Management System",
+            "tasks": [
               {
                 "text": "Requirements: books, physical copies, members, borrow/return, reservations, fine calculation, catalog search",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sat-s2-t4"
+                "id": "w03-sat-s3-t0"
               },
               {
                 "text": "Classes: Library, Book (ISBN, title, author), BookCopy (barcode, BookStatus enum), Member, Loan, Reservation, FineCalculator, Catalog",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sat-s2-t5"
+                "id": "w03-sat-s3-t1"
               },
               {
                 "text": "Strategy pattern for FineCalculator (daily rate, max cap, grace period)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sat-s2-t6"
+                "id": "w03-sat-s3-t2"
               },
               {
                 "text": "Code: Library.borrow(memberId, isbn) → find available copy → create Loan with due date → update BookStatus → notify if has reservation",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sat-s2-t7"
+                "id": "w03-sat-s3-t3"
               },
               {
                 "text": "Reservation: FIFO queue per book; notify when copy returned; 24h hold period",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sat-s2-t8"
+                "id": "w03-sat-s3-t4"
               },
               {
                 "text": "Concurrency: optimistic lock on BookCopy.version to prevent double-borrow",
@@ -2425,7 +2470,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sat-s2-t9"
+                "id": "w03-sat-s3-t5"
               }
             ]
           }
@@ -2438,7 +2483,7 @@ export const roadmap = {
         "isSunday": true,
         "sections": [
           {
-            "title": "Tasks",
+            "title": "DSA Re-Solve",
             "tasks": [
               {
                 "text": "Re-solve LeetCode #84 (Largest Rectangle) — trace [2,1,5,6,2,3] through the stack",
@@ -2457,7 +2502,12 @@ export const roadmap = {
                 "leetcodeNum": 42,
                 "difficulty": null,
                 "id": "w03-sun-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Tech Self-Quiz",
+            "tasks": [
               {
                 "text": "Q1: When should you use ReentrantLock over synchronized? Name 3 specific scenarios.",
                 "tags": [
@@ -2465,14 +2515,14 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sun-s0-t2"
+                "id": "w03-sun-s1-t0"
               },
               {
                 "text": "Q2: Explain CAS and the ABA problem. How does AtomicStampedReference solve it?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sun-s0-t3"
+                "id": "w03-sun-s1-t1"
               },
               {
                 "text": "Q3: What is virtual thread pinning? How do you avoid it in code?",
@@ -2481,36 +2531,41 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sun-s0-t4"
+                "id": "w03-sun-s1-t2"
               },
               {
                 "text": "Q4: Explain StructuredTaskScope.ShutdownOnFailure — what happens when one task fails?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sun-s0-t5"
+                "id": "w03-sun-s1-t3"
               },
               {
                 "text": "Q5: What is the difference between Decorator and Proxy patterns? When would you use each?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sun-s0-t6"
+                "id": "w03-sun-s1-t4"
               },
               {
                 "text": "Q6: Why is Enum Singleton considered the best implementation?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sun-s0-t7"
+                "id": "w03-sun-s1-t5"
               },
               {
                 "text": "Q7: CountDownLatch vs CyclicBarrier — name one scenario where you'd use each.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sun-s0-t8"
-              },
+                "id": "w03-sun-s1-t6"
+              }
+            ]
+          },
+          {
+            "title": "Cheat Sheet — Week 3",
+            "tasks": [
               {
                 "text": "ReentrantLock vs synchronized comparison table (4 key differences)",
                 "tags": [
@@ -2518,14 +2573,14 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sun-s0-t9"
+                "id": "w03-sun-s2-t0"
               },
               {
                 "text": "Atomic: CAS, ABA problem, fix; LongAdder vs AtomicLong",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sun-s0-t10"
+                "id": "w03-sun-s2-t1"
               },
               {
                 "text": "ConcurrentHashMap: Java 7 (segments) vs Java 8 (CAS + bucket-level sync)",
@@ -2534,7 +2589,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sun-s0-t11"
+                "id": "w03-sun-s2-t2"
               },
               {
                 "text": "Virtual Threads: use cases, pinning causes (synchronized, native), fix (ReentrantLock)",
@@ -2543,7 +2598,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sun-s0-t12"
+                "id": "w03-sun-s2-t3"
               },
               {
                 "text": "Structured Concurrency: ShutdownOnFailure vs ShutdownOnSuccess",
@@ -2552,21 +2607,26 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sun-s0-t13"
+                "id": "w03-sun-s2-t4"
               },
               {
                 "text": "Design Patterns: Singleton (enum), Factory, Builder, Decorator, Proxy, Observer, Strategy, Template Method",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sun-s0-t14"
-              },
+                "id": "w03-sun-s2-t5"
+              }
+            ]
+          },
+          {
+            "title": "Plan Week 4",
+            "tasks": [
               {
                 "text": "Skim Monday: HashMap internal structure (hash function, resize, collision)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w03-sun-s0-t15"
+                "id": "w03-sun-s3-t0"
               }
             ]
           }
@@ -3315,55 +3375,60 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w04-sat-s2-t5"
-              },
+              }
+            ]
+          },
+          {
+            "title": "LLD #3 — Design a URL Shortener (LLD focus)",
+            "tasks": [
               {
                 "text": "Requirements: shorten URL, redirect to original, expiry, analytics (click count)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w04-sat-s2-t6"
+                "id": "w04-sat-s3-t0"
               },
               {
                 "text": "Classes: UrlShortenerService, ShortUrl (entity: shortCode, originalUrl, userId, createdAt, expiresAt, clickCount), CodeGenerator, UrlRepository, AnalyticsService, CacheService",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w04-sat-s2-t7"
+                "id": "w04-sat-s3-t1"
               },
               {
                 "text": "Code generation: Base62 encoding of auto-increment ID (characters: 0-9, a-z, A-Z); 6 chars = 62^6 = ~56 billion combinations",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w04-sat-s2-t8"
+                "id": "w04-sat-s3-t2"
               },
               {
                 "text": "Pre-generate vs on-demand: on-demand (encode ID), collision safe by design if using unique sequential IDs",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w04-sat-s2-t9"
+                "id": "w04-sat-s3-t3"
               },
               {
                 "text": "Cache layer: Redis with TTL = URL expiry; cache-aside pattern; on cache miss, load from DB, populate cache",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w04-sat-s2-t10"
+                "id": "w04-sat-s3-t4"
               },
               {
                 "text": "Analytics: async (publish click event to a queue; AnalyticsService consumes); don't block redirect for analytics",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w04-sat-s2-t11"
+                "id": "w04-sat-s3-t5"
               },
               {
                 "text": "Code: createShortUrl(originalUrl, userId, expiryDays) → save to DB → cache it; redirect(shortCode) → cache hit → 301/302 redirect; getLinkStats(shortCode) → return click count, creation date",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w04-sat-s2-t12"
+                "id": "w04-sat-s3-t6"
               }
             ]
           }
@@ -4277,48 +4342,53 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w05-sat-s2-t5"
-              },
+              }
+            ]
+          },
+          {
+            "title": "LLD #4 — Design an Elevator System",
+            "tasks": [
               {
                 "text": "Requirements: N elevators, M floors, requests from inside and outside cabin, optimal dispatch",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sat-s2-t6"
+                "id": "w05-sat-s3-t0"
               },
               {
                 "text": "Classes: ElevatorSystem (Singleton), Elevator, ElevatorButton, FloorButton, Request (ExternalRequest: floor + direction, InternalRequest: destination), Scheduler (interface), OptimalScheduler",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sat-s2-t7"
+                "id": "w05-sat-s3-t1"
               },
               {
                 "text": "State: ElevatorState enum (IDLE, MOVING_UP, MOVING_DOWN, DOOR_OPEN)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sat-s2-t8"
+                "id": "w05-sat-s3-t2"
               },
               {
                 "text": "Scheduling: FCFS, SCAN (elevator direction): continue in same direction while requests exist; reverse only when no more in same direction",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sat-s2-t9"
+                "id": "w05-sat-s3-t3"
               },
               {
                 "text": "Code: Scheduler.assignElevator(request) → pick closest idle or same-direction elevator; Elevator.addDestination(floor); Elevator.move() updates state and processes floors",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sat-s2-t10"
+                "id": "w05-sat-s3-t4"
               },
               {
                 "text": "Observer: notify FloorDisplay + ElevatorDisplay on state change",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sat-s2-t11"
+                "id": "w05-sat-s3-t5"
               }
             ]
           }
@@ -4331,7 +4401,7 @@ export const roadmap = {
         "isSunday": true,
         "sections": [
           {
-            "title": "Tasks",
+            "title": "DSA Re-Solve",
             "tasks": [
               {
                 "text": "Re-solve LeetCode #46 (Permutations) — write full backtracking solution with used[] array from scratch",
@@ -4350,27 +4420,32 @@ export const roadmap = {
                 "leetcodeNum": 124,
                 "difficulty": null,
                 "id": "w05-sun-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Tech Self-Quiz",
+            "tasks": [
               {
                 "text": "Q1: What is the ABA problem in CAS and how does AtomicStampedReference fix it?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sun-s0-t2"
+                "id": "w05-sun-s1-t0"
               },
               {
                 "text": "Q2: Explain Spring @Transactional propagation: REQUIRED vs REQUIRES_NEW. When would you use REQUIRES_NEW?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sun-s0-t3"
+                "id": "w05-sun-s1-t1"
               },
               {
                 "text": "Q3: What is the N+1 query problem? Write a JPQL query that solves it using JOIN FETCH.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sun-s0-t4"
+                "id": "w05-sun-s1-t2"
               },
               {
                 "text": "Q4: What is the difference between at-least-once and exactly-once Kafka delivery? What does the Outbox Pattern solve?",
@@ -4379,28 +4454,33 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sun-s0-t5"
+                "id": "w05-sun-s1-t3"
               },
               {
                 "text": "Q5: Explain Circuit Breaker states: CLOSED → OPEN → HALF-OPEN. What triggers each transition?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sun-s0-t6"
+                "id": "w05-sun-s1-t4"
               },
               {
                 "text": "Q6: Why is gRPC preferred over REST for internal service-to-service communication? Name 3 concrete reasons.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sun-s0-t7"
-              },
+                "id": "w05-sun-s1-t5"
+              }
+            ]
+          },
+          {
+            "title": "Cheat Sheet — Week 5",
+            "tasks": [
               {
                 "text": "Resilience4j: Circuit Breaker states, Retry, RateLimiter, Bulkhead — one-liner for each",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sun-s0-t8"
+                "id": "w05-sun-s2-t0"
               },
               {
                 "text": "Kafka: offset commit strategies (at-most-once, at-least-once, exactly-once), Outbox Pattern",
@@ -4409,29 +4489,34 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sun-s0-t9"
+                "id": "w05-sun-s2-t1"
               },
               {
                 "text": "Spring Transactions: 7 propagation types, 4 isolation levels, 4 @Transactional gotchas",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sun-s0-t10"
+                "id": "w05-sun-s2-t2"
               },
               {
                 "text": "gRPC: 4 RPC types, vs REST comparison, when to use",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sun-s0-t11"
+                "id": "w05-sun-s2-t3"
               },
               {
                 "text": "Backtracking template: choose → explore → unchoose",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sun-s0-t12"
-              },
+                "id": "w05-sun-s2-t4"
+              }
+            ]
+          },
+          {
+            "title": "Plan Week 6",
+            "tasks": [
               {
                 "text": "Skim Monday: Kubernetes basics — Pods, Deployments, Services. You'll use this in Week 6.",
                 "tags": [
@@ -4439,7 +4524,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w05-sun-s0-t13"
+                "id": "w05-sun-s3-t0"
               }
             ]
           }
@@ -5070,55 +5155,60 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w06-sat-s0-t3"
-              },
+              }
+            ]
+          },
+          {
+            "title": "HLD #1 — Design a URL Shortener (Full HLD)",
+            "tasks": [
               {
                 "text": "Functional requirements: create short URL, redirect to original, custom alias, expiry, analytics",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t4"
+                "id": "w06-sat-s1-t0"
               },
               {
                 "text": "Non-functional: 100M URLs stored, 1000 shortens/sec, 10K redirects/sec (100x read-heavy), <100ms redirect latency, 99.99% availability",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t5"
+                "id": "w06-sat-s1-t1"
               },
               {
                 "text": "Capacity: 100M URLs × 500 bytes avg = 50GB; 10K redirects/sec → read-through cache essential",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t6"
+                "id": "w06-sat-s1-t2"
               },
               {
                 "text": "API design: POST /urls {originalUrl, alias?, expiryDays} → {shortUrl, shortCode}; GET /{shortCode} → 301/302 redirect",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t7"
+                "id": "w06-sat-s1-t3"
               },
               {
                 "text": "DB: Relational (MySQL) for URL metadata; no joins needed; single-table design; sharding by shortCode if needed",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t8"
+                "id": "w06-sat-s1-t4"
               },
               {
                 "text": "Code generation: encode auto-increment ID in Base62; avoid decode collisions with sequential IDs; no pre-generation needed",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t9"
+                "id": "w06-sat-s1-t5"
               },
               {
                 "text": "Cache: Redis; key=shortCode, value=originalUrl; TTL=URL expiry; cache hit ~90%; LRU eviction",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t10"
+                "id": "w06-sat-s1-t6"
               },
               {
                 "text": "Analytics: async via Kafka; click event → Kafka topic → consumer writes to separate analytics DB (Cassandra or ClickHouse for time-series)",
@@ -5127,84 +5217,89 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t11"
+                "id": "w06-sat-s1-t7"
               },
               {
                 "text": "Redirect type: 301 (permanent — browser caches, reduces server load) vs 302 (temporary — server always hit, better for analytics count accuracy). Prefer 302 for analytics-heavy use case.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t12"
+                "id": "w06-sat-s1-t8"
               },
               {
                 "text": "Failure scenarios: Redis down → fall through to DB; DB down → return 503; what about expired URLs?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t13"
-              },
+                "id": "w06-sat-s1-t9"
+              }
+            ]
+          },
+          {
+            "title": "LLD #5 — Design a Rate Limiter",
+            "tasks": [
               {
                 "text": "Algorithms to know deeply:",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t14"
+                "id": "w06-sat-s2-t0"
               },
               {
                 "text": "Token Bucket: tokens replenish at fixed rate; burst allowed up to bucket capacity; most common, AWS/Stripe use this",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t15"
+                "id": "w06-sat-s2-t1"
               },
               {
                 "text": "Leaky Bucket: queue of requests drained at fixed rate; smooths traffic; no burst",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t16"
+                "id": "w06-sat-s2-t2"
               },
               {
                 "text": "Fixed Window Counter: counter per window; boundary burst problem (N requests at end of window + N at start of next = 2N in 1 window)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t17"
+                "id": "w06-sat-s2-t3"
               },
               {
                 "text": "Sliding Window Log: store timestamps of all requests; accurate but memory-heavy",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t18"
+                "id": "w06-sat-s2-t4"
               },
               {
                 "text": "Sliding Window Counter: approximate sliding window using two fixed window counters + weighted blend",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t19"
+                "id": "w06-sat-s2-t5"
               },
               {
                 "text": "Design: RateLimiter interface; RedisRateLimiter implementation (atomic Lua script for token bucket in Redis); LocalRateLimiter (AtomicInteger for single-node)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t20"
+                "id": "w06-sat-s2-t6"
               },
               {
                 "text": "Code: Implement Token Bucket with Semaphore and a scheduled token-refill thread; implement Redis-based sliding window counter",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t21"
+                "id": "w06-sat-s2-t7"
               },
               {
                 "text": "Where to enforce: API Gateway level (global) or per-service; per-user vs per-IP vs per-API-key",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sat-s0-t22"
+                "id": "w06-sat-s2-t8"
               }
             ]
           }
@@ -5217,7 +5312,7 @@ export const roadmap = {
         "isSunday": true,
         "sections": [
           {
-            "title": "Tasks",
+            "title": "DSA Re-Solve",
             "tasks": [
               {
                 "text": "Re-solve LeetCode #200 (Number of Islands) — use BFS this time if you used DFS before",
@@ -5236,7 +5331,12 @@ export const roadmap = {
                 "leetcodeNum": 207,
                 "difficulty": null,
                 "id": "w06-sun-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Tech Self-Quiz",
+            "tasks": [
               {
                 "text": "Q1: Kubernetes: what is the difference between liveness and readiness probe? What happens when each fails?",
                 "tags": [
@@ -5244,21 +5344,21 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sun-s0-t2"
+                "id": "w06-sun-s1-t0"
               },
               {
                 "text": "Q2: What is the difference between ConfigMap and Secret? What is the security limitation of Secrets by default?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sun-s0-t3"
+                "id": "w06-sun-s1-t1"
               },
               {
                 "text": "Q3: HPA vs KEDA — when would you choose KEDA over HPA?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sun-s0-t4"
+                "id": "w06-sun-s1-t2"
               },
               {
                 "text": "Q4: Explain Istio's VirtualService — what problem does it solve over standard K8s Service?",
@@ -5267,49 +5367,59 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sun-s0-t5"
+                "id": "w06-sun-s1-t3"
               },
               {
                 "text": "Q5: Union-Find: what is path compression and why does it improve performance?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sun-s0-t6"
+                "id": "w06-sun-s1-t4"
               },
               {
                 "text": "Q6: Topological sort — explain Kahn's algorithm (BFS-based). When does it detect a cycle?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sun-s0-t7"
-              },
+                "id": "w06-sun-s1-t5"
+              }
+            ]
+          },
+          {
+            "title": "STAR Story Review",
+            "tasks": [
               {
                 "text": "Read Story #1 and Story #2 aloud; time yourself; adjust to 90–120 seconds each",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sun-s0-t8"
+                "id": "w06-sun-s2-t0"
               },
               {
                 "text": "Note: what's vague (needs more specific data), what's too long (cut the backstory)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sun-s0-t9"
-              },
+                "id": "w06-sun-s2-t1"
+              }
+            ]
+          },
+          {
+            "title": "HLD Cheat Sheet",
+            "tasks": [
               {
                 "text": "URL Shortener: key components, Base62 encoding, cache strategy, 301 vs 302 decision",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sun-s0-t10"
+                "id": "w06-sun-s3-t0"
               },
               {
                 "text": "Rate Limiter algorithms: Token Bucket vs Fixed Window vs Sliding Window — one-line difference",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sun-s0-t11"
+                "id": "w06-sun-s3-t1"
               },
               {
                 "text": "K8s networking: ClusterIP vs NodePort vs LoadBalancer vs Ingress — one-line each",
@@ -5318,8 +5428,13 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sun-s0-t12"
-              },
+                "id": "w06-sun-s3-t2"
+              }
+            ]
+          },
+          {
+            "title": "Plan Week 7",
+            "tasks": [
               {
                 "text": "Skim Monday: Consistent Hashing. Core HLD concept used in almost every distributed system design.",
                 "tags": [
@@ -5327,7 +5442,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w06-sun-s0-t13"
+                "id": "w06-sun-s4-t0"
               }
             ]
           }
@@ -5590,62 +5705,67 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w07-wed-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "HLD #2 — Design a Web Crawler",
+            "tasks": [
               {
                 "text": "Functional requirements: crawl the web starting from seed URLs, download and index page content, follow links, handle duplicates",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-wed-s0-t2"
+                "id": "w07-wed-s1-t0"
               },
               {
                 "text": "Non-functional: crawl 1 billion pages/month (~400 pages/sec), politeness (robots.txt, crawl-delay), fault tolerant, distributed",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-wed-s0-t3"
+                "id": "w07-wed-s1-t1"
               },
               {
                 "text": "Components: URL Frontier (priority queue of URLs to crawl), Fetcher (HTTP downloader), Parser (extract links, content), DNS Resolver (cache), Duplicate Detector (Bloom filter for URLs), Content Store (distributed storage), Index Store",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-wed-s0-t4"
+                "id": "w07-wed-s1-t2"
               },
               {
                 "text": "Bloom filter: probabilistic data structure; false positives possible (say \"seen\" when not seen); false negatives impossible; space-efficient; use for URL deduplication",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-wed-s0-t5"
+                "id": "w07-wed-s1-t3"
               },
               {
                 "text": "Politeness: respect robots.txt; per-domain crawl delay (don't hammer a single domain); rotate User-Agent; back-off on 429 response",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-wed-s0-t6"
+                "id": "w07-wed-s1-t4"
               },
               {
                 "text": "Architecture: distributed workers; each worker pulls from URL Frontier; publishes extracted URLs back to Frontier queue; separate Frontier partitioned by domain (politeness)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-wed-s0-t7"
+                "id": "w07-wed-s1-t5"
               },
               {
                 "text": "Failure handling: worker crash → URL returns to Frontier after timeout; idempotent design",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-wed-s0-t8"
+                "id": "w07-wed-s1-t6"
               },
               {
                 "text": "Draw the full component diagram during the session",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-wed-s0-t9"
+                "id": "w07-wed-s1-t7"
               }
             ]
           }
@@ -5675,20 +5795,25 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w07-thu-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "HLD #3 — Design a Notification System",
+            "tasks": [
               {
                 "text": "Functional: send push notifications, SMS, email via multiple providers; user preferences; scheduled notifications; failure retry",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-thu-s0-t2"
+                "id": "w07-thu-s1-t0"
               },
               {
                 "text": "Non-functional: 10M notifications/day, low latency for priority notifications, at-least-once delivery, dedup",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-thu-s0-t3"
+                "id": "w07-thu-s1-t1"
               },
               {
                 "text": "Components: API layer (receive notification request), Queue (Kafka — decouple producers from senders), Worker (pull from queue, call provider), Provider (APNs/FCM for push, Twilio for SMS, SendGrid for email), User Preference Store, Retry Queue, DLT",
@@ -5697,35 +5822,35 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-thu-s0-t4"
+                "id": "w07-thu-s1-t2"
               },
               {
                 "text": "Provider abstraction: NotificationSender interface; PushSender, SmsSender, EmailSender implementations; Strategy pattern",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-thu-s0-t5"
+                "id": "w07-thu-s1-t3"
               },
               {
                 "text": "Retry: exponential backoff; max 3 retries; after exhaustion → DLT → alert operations team; never silently drop",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-thu-s0-t6"
+                "id": "w07-thu-s1-t4"
               },
               {
                 "text": "Deduplication: idempotency key in each notification; check Redis before sending; store \"sent\" with TTL=24h",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-thu-s0-t7"
+                "id": "w07-thu-s1-t5"
               },
               {
                 "text": "Scheduling: store future notifications in DB with scheduledAt; separate scheduler service polls and enqueues them at the right time",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-thu-s0-t8"
+                "id": "w07-thu-s1-t6"
               },
               {
                 "text": "Draw the component diagram: producer → Kafka → worker → provider; retry path",
@@ -5734,7 +5859,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-thu-s0-t9"
+                "id": "w07-thu-s1-t7"
               }
             ]
           }
@@ -5867,34 +5992,39 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w07-sat-s0-t3"
-              },
+              }
+            ]
+          },
+          {
+            "title": "HLD #4 — Design a Key-Value Store (like Redis or DynamoDB)",
+            "tasks": [
               {
                 "text": "Requirements: put(key, value), get(key), delete(key); horizontal scalability, high availability, strong or eventual consistency option",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sat-s0-t4"
+                "id": "w07-sat-s1-t0"
               },
               {
                 "text": "Core engine: in-memory hash table + Write-Ahead Log (WAL) for durability; periodic snapshots (AOF vs RDB in Redis terms)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sat-s0-t5"
+                "id": "w07-sat-s1-t1"
               },
               {
                 "text": "Partitioning: consistent hashing to distribute keys across nodes; virtual nodes for balance",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sat-s0-t6"
+                "id": "w07-sat-s1-t2"
               },
               {
                 "text": "Replication: leader-based (one leader, N replicas); quorum reads/writes (W + R > N for strong consistency; e.g., N=3, W=2, R=2)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sat-s0-t7"
+                "id": "w07-sat-s1-t3"
               },
               {
                 "text": "Vector clocks / Versioning: handle concurrent writes in leaderless systems (DynamoDB style); conflict resolution at read time (last-write-wins or application-level merge)",
@@ -5903,77 +6033,82 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sat-s0-t8"
+                "id": "w07-sat-s1-t4"
               },
               {
                 "text": "LSM Tree vs B-Tree: LSM (write-optimized: sequential writes to memtable → SSTable on disk; compaction in background); B-Tree (read-optimized: in-place updates); Cassandra/RocksDB use LSM",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sat-s0-t9"
+                "id": "w07-sat-s1-t5"
               },
               {
                 "text": "Bloom filter per SSTable: before checking disk, check Bloom filter — if key \"not present\", skip that SSTable entirely (false positive possible, false negative impossible)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sat-s0-t10"
+                "id": "w07-sat-s1-t6"
               },
               {
                 "text": "Gossip protocol: nodes share state with random peers; eventually all nodes converge; no single point of failure for cluster membership",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sat-s0-t11"
-              },
+                "id": "w07-sat-s1-t7"
+              }
+            ]
+          },
+          {
+            "title": "LLD #6 — Design a Task Scheduler / Job Queue",
+            "tasks": [
               {
                 "text": "Requirements: schedule one-time and recurring jobs, priority, retry, monitoring, deduplication",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sat-s0-t12"
+                "id": "w07-sat-s2-t0"
               },
               {
                 "text": "Classes: TaskScheduler, Task (id, type, payload, scheduledAt, priority, maxRetries, status), TaskRepository, TaskWorker, RetryPolicy, TaskListener",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sat-s0-t13"
+                "id": "w07-sat-s2-t1"
               },
               {
                 "text": "Priority queue: PriorityBlockingQueue sorted by scheduledAt + priority",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sat-s0-t14"
+                "id": "w07-sat-s2-t2"
               },
               {
                 "text": "Recurring jobs: CRON expression parser; calculate nextRunAt after each execution; requeue with same CRON",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sat-s0-t15"
+                "id": "w07-sat-s2-t3"
               },
               {
                 "text": "Retry: exponential backoff with jitter; after maxRetries → move to DLQ; @Retryable(include=TransientException.class)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sat-s0-t16"
+                "id": "w07-sat-s2-t4"
               },
               {
                 "text": "Deduplication: unique constraint on (taskType, deduplicationKey); INSERT ON CONFLICT DO NOTHING; return existing task",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sat-s0-t17"
+                "id": "w07-sat-s2-t5"
               },
               {
                 "text": "Code: TaskWorker.run() in loop: poll task, execute, update status; handle exception → increment retryCount or move to DLQ; TaskScheduler.schedule(task) → validate → save to DB → optionally enqueue immediately",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sat-s0-t18"
+                "id": "w07-sat-s2-t6"
               }
             ]
           }
@@ -5986,7 +6121,7 @@ export const roadmap = {
         "isSunday": true,
         "sections": [
           {
-            "title": "Tasks",
+            "title": "DSA Re-Solve",
             "tasks": [
               {
                 "text": "Re-solve LeetCode #322 (Coin Change) — trace through coins=[1,2,5], amount=11 with the DP table",
@@ -6005,97 +6140,117 @@ export const roadmap = {
                 "leetcodeNum": 1143,
                 "difficulty": null,
                 "id": "w07-sun-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Tech Self-Quiz",
+            "tasks": [
               {
                 "text": "Q1: Consistent Hashing — how does adding a new node affect which keys need to remap? What role do virtual nodes play?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sun-s0-t2"
+                "id": "w07-sun-s1-t0"
               },
               {
                 "text": "Q2: Event Sourcing vs CQRS — are they the same? When would you use them together?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sun-s0-t3"
+                "id": "w07-sun-s1-t1"
               },
               {
                 "text": "Q3: What is the Outbox Pattern and what specific problem does it solve?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sun-s0-t4"
+                "id": "w07-sun-s1-t2"
               },
               {
                 "text": "Q4: Saga Choreography vs Orchestration — name a scenario where each is preferable.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sun-s0-t5"
+                "id": "w07-sun-s1-t3"
               },
               {
                 "text": "Q5: In a Key-Value Store, what is the difference between LSM Tree and B-Tree storage engines?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sun-s0-t6"
+                "id": "w07-sun-s1-t4"
               },
               {
                 "text": "Q6: What is a Bloom filter? Can it produce false negatives?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sun-s0-t7"
-              },
+                "id": "w07-sun-s1-t5"
+              }
+            ]
+          },
+          {
+            "title": "STAR Story Review",
+            "tasks": [
               {
                 "text": "Read all 4 stories aloud; cut any story over 2 minutes; refine the Result section for all — should have numbers",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sun-s0-t8"
+                "id": "w07-sun-s2-t0"
               },
               {
                 "text": "Ask yourself for each: \"Would a senior interviewer know exactly what I personally contributed?\"",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sun-s0-t9"
-              },
+                "id": "w07-sun-s2-t1"
+              }
+            ]
+          },
+          {
+            "title": "HLD Cheat Sheet — Week 7",
+            "tasks": [
               {
                 "text": "Consistent Hashing: problem it solves, ring concept, virtual nodes, who uses it",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sun-s0-t10"
+                "id": "w07-sun-s3-t0"
               },
               {
                 "text": "DB Scaling: replication vs sharding, CQRS concept",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sun-s0-t11"
+                "id": "w07-sun-s3-t1"
               },
               {
                 "text": "LSM Tree vs B-Tree: one-line difference, which systems use which",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sun-s0-t12"
+                "id": "w07-sun-s3-t2"
               },
               {
                 "text": "Bloom filter: false positive/negative rules, where it's used",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sun-s0-t13"
-              },
+                "id": "w07-sun-s3-t3"
+              }
+            ]
+          },
+          {
+            "title": "Plan Week 8",
+            "tasks": [
               {
                 "text": "Skim Monday: SQL optimization — query plans, indexes, EXPLAIN output reading",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w07-sun-s0-t14"
+                "id": "w07-sun-s4-t0"
               }
             ]
           }
@@ -6497,13 +6652,18 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w08-thu-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "HLD #5 — Design a Ride-Sharing Service (Uber/Ola)",
+            "tasks": [
               {
                 "text": "Functional: rider requests ride, match to nearest available driver, real-time tracking, ETA, payment",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-thu-s0-t2"
+                "id": "w08-thu-s1-t0"
               },
               {
                 "text": "Non-functional: millions of concurrent users, 10ms driver location update, low-latency matching, high availability",
@@ -6512,42 +6672,42 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-thu-s0-t3"
+                "id": "w08-thu-s1-t1"
               },
               {
                 "text": "Location service: drivers send GPS ping every 5 seconds; store in Redis GeoHash (GEOADD/GEORADIUS); not relational DB — too many writes per second",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-thu-s0-t4"
+                "id": "w08-thu-s1-t2"
               },
               {
                 "text": "Matching: GEORADIUS to find drivers within N km; rank by ETA (consider traffic, not just distance); assign and notify",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-thu-s0-t5"
+                "id": "w08-thu-s1-t3"
               },
               {
                 "text": "Ride state machine: REQUESTED → DRIVER_ASSIGNED → DRIVER_ARRIVED → IN_PROGRESS → COMPLETED / CANCELLED",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-thu-s0-t6"
+                "id": "w08-thu-s1-t4"
               },
               {
                 "text": "Real-time tracking: WebSocket (bidirectional, persistent) for driver location push to rider; HTTP long-polling as fallback",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-thu-s0-t7"
+                "id": "w08-thu-s1-t5"
               },
               {
                 "text": "Surge pricing: supply/demand ratio per geo-zone; pre-computed at zone level (hexagonal grid); update every 1–5 minutes",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-thu-s0-t8"
+                "id": "w08-thu-s1-t6"
               },
               {
                 "text": "Notifications: Kafka for ride events → Notification Service → push via FCM/APNs",
@@ -6556,14 +6716,14 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-thu-s0-t9"
+                "id": "w08-thu-s1-t7"
               },
               {
                 "text": "Payment: Saga pattern — charge card → release driver payment → update records; idempotency key per ride",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-thu-s0-t10"
+                "id": "w08-thu-s1-t8"
               }
             ]
           }
@@ -6694,34 +6854,39 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w08-sat-s0-t3"
-              },
+              }
+            ]
+          },
+          {
+            "title": "HLD #6 — Design a Distributed Cache (like Redis Cluster)",
+            "tasks": [
               {
                 "text": "Requirements: distributed cache; O(1) get/set; TTL expiry; eviction; replication for HA; horizontal scaling",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sat-s0-t4"
+                "id": "w08-sat-s1-t0"
               },
               {
                 "text": "Data partitioning: consistent hashing across cache nodes; virtual nodes; client-side partitioning vs proxy-based (Twemproxy) vs cluster (Redis Cluster)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sat-s0-t5"
+                "id": "w08-sat-s1-t1"
               },
               {
                 "text": "Redis Cluster: 16384 hash slots; each node owns a range of slots; CLUSTER INFO; MOVED redirection when client routes to wrong node; client libraries handle this transparently",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sat-s0-t6"
+                "id": "w08-sat-s1-t2"
               },
               {
                 "text": "Replication: each primary has one or more replicas; Sentinel (Redis < Cluster) for failover; Cluster handles failover natively",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sat-s0-t7"
+                "id": "w08-sat-s1-t3"
               },
               {
                 "text": "Cache eviction policies: noeviction (return error when full — bad for cache), allkeys-lru (evict any key LRU — good for cache), volatile-lru (evict keys with TTL set by LRU), allkeys-lfu (Java 17 Caffeine default equivalent)",
@@ -6730,77 +6895,82 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sat-s0-t8"
+                "id": "w08-sat-s1-t4"
               },
               {
                 "text": "Write strategies: write-through (write DB + cache together), write-behind (cache only, async DB), cache-aside (app manages cache on miss)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sat-s0-t9"
+                "id": "w08-sat-s1-t5"
               },
               {
                 "text": "Thundering herd: many requests miss cache simultaneously (after cache expiry); solutions: lock (only one fetches, others wait), jitter (randomize TTL so not all expire together), background refresh before expiry",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sat-s0-t10"
+                "id": "w08-sat-s1-t6"
               },
               {
                 "text": "Code sketch: CacheService.get(key) → Redis hit return; miss → DB → cache → return; CacheService.invalidate(key) on write",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sat-s0-t11"
-              },
+                "id": "w08-sat-s1-t7"
+              }
+            ]
+          },
+          {
+            "title": "LLD #7 — Design a Distributed Message Queue (simplified Kafka)",
+            "tasks": [
               {
                 "text": "Requirements: produce message, consume message, consumer groups, offset management, persistence",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sat-s0-t12"
+                "id": "w08-sat-s2-t0"
               },
               {
                 "text": "Classes: Topic, Partition (ordered log), Segment (file segment of partition), Producer, Consumer, ConsumerGroup, OffsetStore, Broker",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sat-s0-t13"
+                "id": "w08-sat-s2-t1"
               },
               {
                 "text": "Partition: ArrayList or on-disk file of messages; messages are append-only; each message has an offset (index)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sat-s0-t14"
+                "id": "w08-sat-s2-t2"
               },
               {
                 "text": "Consumer Group: each partition assigned to one consumer in the group; if consumers > partitions, some consumers idle",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sat-s0-t15"
+                "id": "w08-sat-s2-t3"
               },
               {
                 "text": "Offset: stored per (groupId, topicId, partitionId); consumer tracks what it has processed",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sat-s0-t16"
+                "id": "w08-sat-s2-t4"
               },
               {
                 "text": "Persistence: write to SegmentFile (sequential disk write — fast); index file (offset → byte position); mmap for fast reads",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sat-s0-t17"
+                "id": "w08-sat-s2-t5"
               },
               {
                 "text": "Code: Topic.publish(message) → select partition by key hash → Partition.append(message) → return offset; Consumer.poll() → fetch messages after lastCommittedOffset → process → commitOffset(offset)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sat-s0-t18"
+                "id": "w08-sat-s2-t6"
               }
             ]
           }
@@ -6813,7 +6983,7 @@ export const roadmap = {
         "isSunday": true,
         "sections": [
           {
-            "title": "Tasks",
+            "title": "DSA Re-Solve",
             "tasks": [
               {
                 "text": "Re-solve LeetCode #72 (Edit Distance) — fill the DP table for \"intention\" → \"execution\" (5×5 portion)",
@@ -6832,104 +7002,124 @@ export const roadmap = {
                 "leetcodeNum": 312,
                 "difficulty": null,
                 "id": "w08-sun-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Tech Self-Quiz",
+            "tasks": [
               {
                 "text": "Q1: Composite index leftmost prefix rule — which queries use index (a,b,c)? Give 3 examples that do and 2 that don't.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sun-s0-t2"
+                "id": "w08-sun-s1-t0"
               },
               {
                 "text": "Q2: Window function: how does RANK() differ from DENSE_RANK()? Give an example with ties.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sun-s0-t3"
+                "id": "w08-sun-s1-t1"
               },
               {
                 "text": "Q3: Cassandra partition key vs clustering key — what does each control?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sun-s0-t4"
+                "id": "w08-sun-s1-t2"
               },
               {
                 "text": "Q4: Redis GeoHash — how does GEORADIUS work? What data structure underlies it?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sun-s0-t5"
+                "id": "w08-sun-s1-t3"
               },
               {
                 "text": "Q5: Thundering herd problem in caching — explain the problem and 2 solutions.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sun-s0-t6"
+                "id": "w08-sun-s1-t4"
               },
               {
                 "text": "Q6: In Interval DP, why do you think about which element was last removed (not first)?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sun-s0-t7"
-              },
+                "id": "w08-sun-s1-t5"
+              }
+            ]
+          },
+          {
+            "title": "STAR Story Review",
+            "tasks": [
               {
                 "text": "Read all 6 stories aloud in one sitting (should take ~12 minutes total)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sun-s0-t8"
+                "id": "w08-sun-s2-t0"
               },
               {
                 "text": "Score each: 1 (weak — vague or no data) / 2 (ok) / 3 (strong — specific + quantified + clear personal contribution)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sun-s0-t9"
+                "id": "w08-sun-s2-t1"
               },
               {
                 "text": "Rewrite any score-1 story today",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sun-s0-t10"
-              },
+                "id": "w08-sun-s2-t2"
+              }
+            ]
+          },
+          {
+            "title": "HLD Cheat Sheet — Week 8",
+            "tasks": [
               {
                 "text": "SQL index types: B-Tree vs Hash; composite index rule; covering index; EXPLAIN red flags",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sun-s0-t11"
+                "id": "w08-sun-s3-t0"
               },
               {
                 "text": "Cassandra: partition key, clustering key, design rule (query-first)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sun-s0-t12"
+                "id": "w08-sun-s3-t1"
               },
               {
                 "text": "Redis data structures + use cases (one-liner per structure)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sun-s0-t13"
+                "id": "w08-sun-s3-t2"
               },
               {
                 "text": "Distributed cache: eviction policies, thundering herd solutions, write strategies",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sun-s0-t14"
-              },
+                "id": "w08-sun-s3-t3"
+              }
+            ]
+          },
+          {
+            "title": "Plan Week 9",
+            "tasks": [
               {
                 "text": "Skim Monday: Heap data structure and when it appears in interview problems",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w08-sun-s0-t15"
+                "id": "w08-sun-s4-t0"
               }
             ]
           }
@@ -7562,7 +7752,12 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w09-sat-s2-t3"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Mock Technical Drill — Mixed HLD + LLD",
+            "tasks": [
               {
                 "text": "Pick any HLD from Weeks 6–9 that you're least confident in",
                 "tags": [
@@ -7570,21 +7765,21 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sat-s2-t4"
+                "id": "w09-sat-s3-t0"
               },
               {
                 "text": "Set a 45-minute timer; draw + narrate the entire design without notes",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sat-s2-t5"
+                "id": "w09-sat-s3-t1"
               },
               {
                 "text": "After timer: review your design for: capacity estimates done? API defined? DB schema? Cache layer? Async paths? Failure scenarios?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sat-s2-t6"
+                "id": "w09-sat-s3-t2"
               },
               {
                 "text": "Repeat with a LLD from Weeks 1–5 for remaining 30 minutes",
@@ -7593,7 +7788,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sat-s2-t7"
+                "id": "w09-sat-s3-t3"
               }
             ]
           }
@@ -7606,7 +7801,7 @@ export const roadmap = {
         "isSunday": true,
         "sections": [
           {
-            "title": "Tasks",
+            "title": "DSA Re-Solve",
             "tasks": [
               {
                 "text": "Re-solve LeetCode #295 (Median from Stream) — trace adding [5,3,8,4] through both heaps step by step",
@@ -7625,49 +7820,59 @@ export const roadmap = {
                 "leetcodeNum": 208,
                 "difficulty": null,
                 "id": "w09-sun-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Tech Self-Quiz",
+            "tasks": [
               {
                 "text": "Q1: Two-heap approach for median: what invariant must you maintain? What happens when you add an even-positioned element?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sun-s0-t2"
+                "id": "w09-sun-s1-t0"
               },
               {
                 "text": "Q2: Snowflake ID — what are its 3 components and what property makes it time-sortable?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sun-s0-t3"
+                "id": "w09-sun-s1-t1"
               },
               {
                 "text": "Q3: Fan-out on write vs fan-out on read — when would you choose each for a social feed?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sun-s0-t4"
+                "id": "w09-sun-s1-t2"
               },
               {
                 "text": "Q4: What is the Saga pattern? Choreography vs Orchestration — give a specific scenario for each.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sun-s0-t5"
+                "id": "w09-sun-s1-t3"
               },
               {
                 "text": "Q5: How does HLS (HTTP Live Streaming) work? Why is it well-suited for CDN delivery?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sun-s0-t6"
+                "id": "w09-sun-s1-t4"
               },
               {
                 "text": "Q6: What is double-entry bookkeeping in a payment ledger? Why is it append-only?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sun-s0-t7"
-              },
+                "id": "w09-sun-s1-t5"
+              }
+            ]
+          },
+          {
+            "title": "HLD Review Sprint",
+            "tasks": [
               {
                 "text": "In 30 minutes, rapidly sketch (just boxes + arrows, no detail) all 11 HLD designs from memory",
                 "tags": [
@@ -7675,15 +7880,20 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sun-s0-t8"
+                "id": "w09-sun-s2-t0"
               },
               {
                 "text": "If you can't draw a box-and-arrow diagram of any design in < 2 minutes, that's your weakest area — flag it",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sun-s0-t9"
-              },
+                "id": "w09-sun-s2-t1"
+              }
+            ]
+          },
+          {
+            "title": "Cheat Sheet — Month 2 Summary",
+            "tasks": [
               {
                 "text": "K8s objects: Pod, Deployment, Service, Ingress, ConfigMap, Secret, HPA, StatefulSet — one-liner each",
                 "tags": [
@@ -7691,7 +7901,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sun-s0-t10"
+                "id": "w09-sun-s3-t0"
               },
               {
                 "text": "Kafka: partitions, consumer groups, offset strategies, Outbox Pattern",
@@ -7700,7 +7910,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sun-s0-t11"
+                "id": "w09-sun-s3-t1"
               },
               {
                 "text": "HLD patterns: fan-out on write vs read, consistent hashing, event sourcing, Saga",
@@ -7709,21 +7919,26 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sun-s0-t12"
+                "id": "w09-sun-s3-t2"
               },
               {
                 "text": "SQL: B-tree index, composite index rule, EXPLAIN red flags, window functions (ROW_NUMBER, RANK, LAG)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sun-s0-t13"
-              },
+                "id": "w09-sun-s3-t3"
+              }
+            ]
+          },
+          {
+            "title": "Plan Week 10",
+            "tasks": [
               {
                 "text": "Week 10 is the Buffer/Catch-Up week. No new content is added. Review what you have.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w09-sun-s0-t14"
+                "id": "w09-sun-s4-t0"
               }
             ]
           }
@@ -8016,7 +8231,7 @@ export const roadmap = {
         "isSunday": true,
         "sections": [
           {
-            "title": "Tasks",
+            "title": "Complete STAR Story Run-Through",
             "tasks": [
               {
                 "text": "All 8 stories out loud; time each; do any need sharpening?",
@@ -8031,13 +8246,18 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w10-sun-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Cheat Sheet Consolidation",
+            "tasks": [
               {
                 "text": "Merge all 9 weekly cheat sheets into one 2-page master cheat sheet",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w10-sun-s0-t2"
+                "id": "w10-sun-s1-t0"
               },
               {
                 "text": "Categories: Java (Core, Concurrency, JVM), Spring Boot, Kafka, K8s, DSA Patterns, HLD Patterns, LLD Patterns, SQL",
@@ -8050,42 +8270,52 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w10-sun-s0-t3"
+                "id": "w10-sun-s1-t1"
               },
               {
                 "text": "This master sheet is your final revision document for Months 3–4",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w10-sun-s0-t4"
-              },
+                "id": "w10-sun-s1-t2"
+              }
+            ]
+          },
+          {
+            "title": "Plan Month 3",
+            "tasks": [
               {
                 "text": "Skim Week 11 Monday: Advanced Spring Security",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w10-sun-s0-t5"
-              },
+                "id": "w10-sun-s2-t0"
+              }
+            ]
+          },
+          {
+            "title": "Goal Reset",
+            "tasks": [
               {
                 "text": "Write down: which company types you're targeting? product startup, MNC, FAANG-adjacent?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w10-sun-s0-t6"
+                "id": "w10-sun-s3-t0"
               },
               {
                 "text": "What is your target compensation range?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w10-sun-s0-t7"
+                "id": "w10-sun-s3-t1"
               },
               {
                 "text": "Which role: senior engineer, tech lead, staff engineer?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w10-sun-s0-t8"
+                "id": "w10-sun-s3-t2"
               },
               {
                 "text": "This drives how to weight Weeks 11–16 (deep LLD for startups, HLD + behavioral for FAANG-adjacent, Spring depth for MNC Java shops)",
@@ -8096,7 +8326,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w10-sun-s0-t9"
+                "id": "w10-sun-s3-t3"
               }
             ]
           }
@@ -8763,13 +8993,18 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w11-sat-s2-t4"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Full Mock Interview #1",
+            "tasks": [
               {
                 "text": "45 minutes DSA: one medium problem (interviewer role: time the candidate, give hints after 10 min if stuck)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": "Medium",
-                "id": "w11-sat-s2-t5"
+                "id": "w11-sat-s3-t0"
               },
               {
                 "text": "30 minutes HLD: design one system from Weeks 6–9 list (pick at random)",
@@ -8778,7 +9013,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w11-sat-s2-t6"
+                "id": "w11-sat-s3-t1"
               },
               {
                 "text": "Debrief: rate yourself on (a) correct solution, (b) communicated approach before coding, (c) handled edge cases, (d) analysed complexity, (e) asked clarifying questions before HLD design",
@@ -8787,7 +9022,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w11-sat-s2-t7"
+                "id": "w11-sat-s3-t2"
               }
             ]
           }
@@ -8800,7 +9035,7 @@ export const roadmap = {
         "isSunday": true,
         "sections": [
           {
-            "title": "Tasks",
+            "title": "DSA Re-Solve",
             "tasks": [
               {
                 "text": "Re-solve LeetCode #253 (Meeting Rooms II) — trace [[0,30],[5,10],[15,20]] through min-heap",
@@ -8819,55 +9054,65 @@ export const roadmap = {
                 "leetcodeNum": 56,
                 "difficulty": null,
                 "id": "w11-sun-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Tech Self-Quiz — Security",
+            "tasks": [
               {
                 "text": "Q1: Explain the OAuth2 Authorization Code Flow with PKCE. Why is PKCE needed?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w11-sun-s0-t2"
+                "id": "w11-sun-s1-t0"
               },
               {
                 "text": "Q2: JWT: why can't you revoke a JWT? What are two workarounds?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w11-sun-s0-t3"
+                "id": "w11-sun-s1-t1"
               },
               {
                 "text": "Q3: Spring Security self-invocation problem with method security — what causes it and how to fix?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w11-sun-s0-t4"
+                "id": "w11-sun-s1-t2"
               },
               {
                 "text": "Q4: What is the difference between @PreAuthorize and @PostAuthorize?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w11-sun-s0-t5"
+                "id": "w11-sun-s1-t3"
               },
               {
                 "text": "Q5: What are RED metrics? Apply them to a payment service — what would you monitor?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w11-sun-s0-t6"
+                "id": "w11-sun-s1-t4"
               },
               {
                 "text": "Q6: What is MDC? How does it help with distributed tracing in a microservice?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w11-sun-s0-t7"
-              },
+                "id": "w11-sun-s1-t5"
+              }
+            ]
+          },
+          {
+            "title": "Mock Interview Debrief",
+            "tasks": [
               {
                 "text": "Rewrite the solution to the mock interview DSA problem cleanly (any code written under pressure needs a clean re-write)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w11-sun-s0-t8"
+                "id": "w11-sun-s2-t0"
               },
               {
                 "text": "For the HLD: identify the one component you explained poorly; write a clear 2-paragraph explanation of that component",
@@ -8876,42 +9121,52 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w11-sun-s0-t9"
-              },
+                "id": "w11-sun-s2-t1"
+              }
+            ]
+          },
+          {
+            "title": "Cheat Sheet — Week 11",
+            "tasks": [
               {
                 "text": "JWT: structure, validation, refresh token flow, revocation options",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w11-sun-s0-t10"
+                "id": "w11-sun-s3-t0"
               },
               {
                 "text": "OAuth2: 4 roles, Authorization Code + PKCE flow steps",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w11-sun-s0-t11"
+                "id": "w11-sun-s3-t1"
               },
               {
                 "text": "Spring Security filter chain: key filters in order",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w11-sun-s0-t12"
+                "id": "w11-sun-s3-t2"
               },
               {
                 "text": "Observability: Metrics (RED), Logs (structured + MDC), Traces (traceId propagation) — the three pillars",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w11-sun-s0-t13"
-              },
+                "id": "w11-sun-s3-t3"
+              }
+            ]
+          },
+          {
+            "title": "Plan Week 12",
+            "tasks": [
               {
                 "text": "Skim Monday: Distributed transactions + saga in depth",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w11-sun-s0-t14"
+                "id": "w11-sun-s4-t0"
               }
             ]
           }
@@ -9502,62 +9757,67 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w12-sat-s0-t3"
-              },
+              }
+            ]
+          },
+          {
+            "title": "HLD #12 — Design a Distributed ID Generator",
+            "tasks": [
               {
                 "text": "Why not auto-increment: doesn't scale across DB shards; predictable (security concern)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sat-s0-t4"
+                "id": "w12-sat-s1-t0"
               },
               {
                 "text": "Approaches:",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sat-s0-t5"
+                "id": "w12-sat-s1-t1"
               },
               {
                 "text": "UUID v4: random 128-bit; globally unique; no coordination; not sortable; large storage",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sat-s0-t6"
+                "id": "w12-sat-s1-t2"
               },
               {
                 "text": "Snowflake: 64-bit; timestamp (41 bits) + machine ID (10 bits) + sequence (12 bits); sortable by time; 4096 IDs/ms per machine; Twitter's approach",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sat-s0-t7"
+                "id": "w12-sat-s1-t3"
               },
               {
                 "text": "Flake (Boundary): similar to Snowflake but with MAC address; no central coordination",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sat-s0-t8"
+                "id": "w12-sat-s1-t4"
               },
               {
                 "text": "Ticket Server: single DB sequence generator; simple; single point of failure; use multiple ticket servers with different initial values and step sizes",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sat-s0-t9"
+                "id": "w12-sat-s1-t5"
               },
               {
                 "text": "Choose: Snowflake for high throughput distributed systems; Ticket Server for simpler architectures",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sat-s0-t10"
+                "id": "w12-sat-s1-t6"
               },
               {
                 "text": "Clock skew problem: if machine clock moves backward, IDs are non-monotonic; solution: wait until clock catches up; detect and alert",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sat-s0-t11"
+                "id": "w12-sat-s1-t7"
               },
               {
                 "text": "Code: Implement a Snowflake ID generator as a singleton; handle clock skew; test uniqueness under concurrent load",
@@ -9566,7 +9826,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sat-s0-t12"
+                "id": "w12-sat-s1-t8"
               }
             ]
           },
@@ -9580,7 +9840,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sat-s1-t0"
+                "id": "w12-sat-s2-t0"
               },
               {
                 "text": "45 min: Combined DSA + system design: Design a feature flag service (lightweight: store flags in DB + cache; evaluate in SDK; A/B test capability)",
@@ -9589,14 +9849,14 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sat-s1-t1"
+                "id": "w12-sat-s2-t1"
               },
               {
                 "text": "Debrief: what trade-offs did you articulate clearly? What did you skip that you shouldn't have?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sat-s1-t2"
+                "id": "w12-sat-s2-t2"
               }
             ]
           }
@@ -9609,7 +9869,7 @@ export const roadmap = {
         "isSunday": true,
         "sections": [
           {
-            "title": "Tasks",
+            "title": "DSA Re-Solve",
             "tasks": [
               {
                 "text": "Re-solve LeetCode #287 (Find Duplicate) — trace through [1,3,4,2,2] using Floyd's on the array",
@@ -9628,55 +9888,65 @@ export const roadmap = {
                 "leetcodeNum": 25,
                 "difficulty": null,
                 "id": "w12-sun-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Distributed Systems Self-Quiz",
+            "tasks": [
               {
                 "text": "Q1: CAP theorem: if you have a network partition, which systems choose C and which choose A? Give real examples.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sun-s0-t2"
+                "id": "w12-sun-s1-t0"
               },
               {
                 "text": "Q2: Explain Raft leader election. What constitutes a quorum? What happens if the leader crashes?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sun-s0-t3"
+                "id": "w12-sun-s1-t1"
               },
               {
                 "text": "Q3: What is a CRDT? Give one example of a CRDT data structure and how it handles conflicts.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sun-s0-t4"
+                "id": "w12-sun-s1-t2"
               },
               {
                 "text": "Q4: 2PC vs Saga: what is the key structural difference? When would you use each?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sun-s0-t5"
+                "id": "w12-sun-s1-t3"
               },
               {
                 "text": "Q5: What is a Merkle tree and how is it used for anti-entropy in distributed systems?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sun-s0-t6"
+                "id": "w12-sun-s1-t4"
               },
               {
                 "text": "Q6: What is read-your-writes consistency? How would you implement it in a database with read replicas?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sun-s0-t7"
-              },
+                "id": "w12-sun-s1-t5"
+              }
+            ]
+          },
+          {
+            "title": "Mock Interview Debrief Writing",
+            "tasks": [
               {
                 "text": "For each of the 4 mocks this week: write 2 sentences on what you did well + 1 concrete improvement for next time",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sun-s0-t8"
+                "id": "w12-sun-s2-t0"
               },
               {
                 "text": "Identify your weakest mock category (DSA, HLD, LLD, or Behavioral) — this gets extra focus in Weeks 13–16",
@@ -9687,43 +9957,53 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sun-s0-t9"
-              },
+                "id": "w12-sun-s2-t1"
+              }
+            ]
+          },
+          {
+            "title": "Cheat Sheet — Week 12",
+            "tasks": [
               {
                 "text": "CAP/PACELC: CP vs AP examples, PACELC summary",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sun-s0-t10"
+                "id": "w12-sun-s3-t0"
               },
               {
                 "text": "Consistency models: strong, eventual, read-your-writes, monotonic read — one example each",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sun-s0-t11"
+                "id": "w12-sun-s3-t1"
               },
               {
                 "text": "Distributed locking: Redis single-node, Redlock, ZooKeeper approaches — one-line each",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sun-s0-t12"
+                "id": "w12-sun-s3-t2"
               },
               {
                 "text": "Raft: leader election, quorum, log replication — 3 bullet points",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sun-s0-t13"
+                "id": "w12-sun-s3-t3"
               },
               {
                 "text": "2PC: 2 phases, 2 failure modes, why not in microservices",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sun-s0-t14"
-              },
+                "id": "w12-sun-s3-t4"
+              }
+            ]
+          },
+          {
+            "title": "Plan Week 13",
+            "tasks": [
               {
                 "text": "Skim Monday: Advanced Kafka patterns (schemas, backpressure, stream processing)",
                 "tags": [
@@ -9731,7 +10011,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w12-sun-s0-t15"
+                "id": "w12-sun-s4-t0"
               }
             ]
           }
@@ -10422,48 +10702,53 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w13-sat-s1-t5"
-              },
+              }
+            ]
+          },
+          {
+            "title": "LLD #8 — Design an ATM Machine",
+            "tasks": [
               {
                 "text": "States: IDLE → CARD_INSERTED → PIN_ENTERED → TRANSACTION → DISPENSING → CARD_EJECTED",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sat-s1-t6"
+                "id": "w13-sat-s2-t0"
               },
               {
                 "text": "State pattern: each state is a class; transitions are explicit; invalid transitions throw exception",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sat-s1-t7"
+                "id": "w13-sat-s2-t1"
               },
               {
                 "text": "Classes: ATM (context), ATMState (interface), each state class, CardReader, PinValidator, CashDispenser, BankService (interface), PrinterService",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sat-s1-t8"
+                "id": "w13-sat-s2-t2"
               },
               {
                 "text": "Security: PIN should never be stored; compare hash; lockout after 3 failed attempts",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sat-s1-t9"
+                "id": "w13-sat-s2-t3"
               },
               {
                 "text": "Transaction: check balance → debit account (via BankService with idempotency key) → dispense cash; rollback if cash dispensing fails",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sat-s1-t10"
+                "id": "w13-sat-s2-t4"
               },
               {
                 "text": "Code: ATM.insertCard() transitions state; ATM.enterPin() validates and transitions; ATM.withdraw(amount) calls BankService + dispenses",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sat-s1-t11"
+                "id": "w13-sat-s2-t5"
               }
             ]
           }
@@ -10476,7 +10761,7 @@ export const roadmap = {
         "isSunday": true,
         "sections": [
           {
-            "title": "Tasks",
+            "title": "DSA Re-Solve",
             "tasks": [
               {
                 "text": "Re-solve LeetCode #4 (Median of Two Sorted Arrays) — this is hard; trace through [1,3] and [2] slowly",
@@ -10495,20 +10780,25 @@ export const roadmap = {
                 "leetcodeNum": 743,
                 "difficulty": null,
                 "id": "w13-sun-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Tech Self-Quiz — Month 3 Mix",
+            "tasks": [
               {
                 "text": "Q1: Avro schema evolution — what is BACKWARD compatibility? Give an example of a compatible and incompatible change.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sun-s0-t2"
+                "id": "w13-sun-s1-t0"
               },
               {
                 "text": "Q2: In Project Reactor, why must you never call Thread.sleep() inside a reactive chain? What should you use instead?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sun-s0-t3"
+                "id": "w13-sun-s1-t1"
               },
               {
                 "text": "Q3: Kafka Streams KStream vs KTable — what is the semantic difference?",
@@ -10517,35 +10807,40 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sun-s0-t4"
+                "id": "w13-sun-s1-t2"
               },
               {
                 "text": "Q4: Operational Transformation vs CRDT for collaborative editing — what is the fundamental difference?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sun-s0-t5"
+                "id": "w13-sun-s1-t3"
               },
               {
                 "text": "Q5: Bellman-Ford vs Dijkstra's — when do you use each? What does K-stops constraint require?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sun-s0-t6"
+                "id": "w13-sun-s1-t4"
               },
               {
                 "text": "Q6: In a stock trading platform matching engine, why is single-threaded execution preferred for the matching loop?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sun-s0-t7"
-              },
+                "id": "w13-sun-s1-t5"
+              }
+            ]
+          },
+          {
+            "title": "Final STAR Polish",
+            "tasks": [
               {
                 "text": "Read all 8 stories aloud; this time, also add 2 new answers: \"What is your biggest technical weakness?\" and \"What kind of engineering culture do you thrive in?\"",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sun-s0-t8"
+                "id": "w13-sun-s2-t0"
               },
               {
                 "text": "Total interview answers ready: 8 STAR + 2 self-reflection + \"Why this company?\" per company you apply to",
@@ -10554,8 +10849,13 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sun-s0-t9"
-              },
+                "id": "w13-sun-s2-t1"
+              }
+            ]
+          },
+          {
+            "title": "Cheat Sheet — Week 13",
+            "tasks": [
               {
                 "text": "Kafka Schema Registry: Avro, compatibility modes, why it matters",
                 "tags": [
@@ -10563,7 +10863,7 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sun-s0-t10"
+                "id": "w13-sun-s3-t0"
               },
               {
                 "text": "Kafka Streams: KStream vs KTable, stateful operations",
@@ -10572,28 +10872,33 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sun-s0-t11"
+                "id": "w13-sun-s3-t1"
               },
               {
                 "text": "Reactive: Mono vs Flux, key operators, backpressure, when NOT to use WebFlux",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sun-s0-t12"
+                "id": "w13-sun-s3-t2"
               },
               {
                 "text": "Dijkstra vs Bellman-Ford vs BFS: when to use each (non-negative weights / negative weights / unweighted)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sun-s0-t13"
-              },
+                "id": "w13-sun-s3-t3"
+              }
+            ]
+          },
+          {
+            "title": "Plan Week 14",
+            "tasks": [
               {
                 "text": "Identify your target company type from the Friday strategy session; Week 14 tilts accordingly",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w13-sun-s0-t14"
+                "id": "w13-sun-s4-t0"
               }
             ]
           }
@@ -10996,7 +11301,7 @@ export const roadmap = {
         "isSunday": true,
         "sections": [
           {
-            "title": "Tasks",
+            "title": "DSA Re-Solve",
             "tasks": [
               {
                 "text": "Re-solve LeetCode #76 (Minimum Window Substring) — the hardest sliding window",
@@ -11015,7 +11320,12 @@ export const roadmap = {
                 "leetcodeNum": 41,
                 "difficulty": null,
                 "id": "w14-sun-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Comprehensive Self-Quiz — Random Mix",
+            "tasks": [
               {
                 "text": "Draw 10 questions from your cheat sheets (3 Java/Spring, 3 DSA patterns, 2 HLD, 2 Behavioral)",
                 "tags": [
@@ -11024,29 +11334,39 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w14-sun-s0-t2"
+                "id": "w14-sun-s1-t0"
               },
               {
                 "text": "Answer each without looking at notes; check against notes after; flag any gap",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w14-sun-s0-t3"
-              },
+                "id": "w14-sun-s1-t1"
+              }
+            ]
+          },
+          {
+            "title": "STAR Run-Through",
+            "tasks": [
               {
                 "text": "All 8 stories + \"tell me about yourself\" (2 min) + \"biggest weakness\" + \"why this company\" (per company)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w14-sun-s0-t4"
+                "id": "w14-sun-s2-t0"
               },
               {
                 "text": "Total: ~22 minutes; if any story is still rough, rewrite it today",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w14-sun-s0-t5"
-              },
+                "id": "w14-sun-s2-t1"
+              }
+            ]
+          },
+          {
+            "title": "Mindset + Energy",
+            "tasks": [
               {
                 "text": "Write down: what are you most confident in? (DSA, Java Concurrency, HLD patterns, Behavioral?)",
                 "tags": [
@@ -11056,28 +11376,33 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w14-sun-s0-t6"
+                "id": "w14-sun-s3-t0"
               },
               {
                 "text": "Write down: what do you still want to improve? Commit to 1 specific action per gap in the final 2 weeks",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w14-sun-s0-t7"
+                "id": "w14-sun-s3-t1"
               },
               {
                 "text": "Read the interview day checklist from Week 13 Friday notes",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w14-sun-s0-t8"
-              },
+                "id": "w14-sun-s3-t2"
+              }
+            ]
+          },
+          {
+            "title": "Plan Week 15",
+            "tasks": [
               {
                 "text": "Schedule mock interviews with friends, senior engineers, or platforms (Pramp, Interviewing.io)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w14-sun-s0-t9"
+                "id": "w14-sun-s4-t0"
               }
             ]
           }
@@ -11665,7 +11990,7 @@ export const roadmap = {
         "isSunday": true,
         "sections": [
           {
-            "title": "Tasks",
+            "title": "DSA Re-Solve",
             "tasks": [
               {
                 "text": "Solve 2 problems you scored weakest on during the pattern audit this week",
@@ -11673,7 +11998,12 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w15-sun-s0-t0"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Comprehensive Final Quiz",
+            "tasks": [
               {
                 "text": "12 questions: one from each DSA pattern; 3 Spring Boot; 3 Distributed Systems; 2 STAR",
                 "tags": [
@@ -11681,28 +12011,33 @@ export const roadmap = {
                 ],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w15-sun-s0-t1"
+                "id": "w15-sun-s1-t0"
               },
               {
                 "text": "No notes; time yourself; target < 90 seconds per answer",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w15-sun-s0-t2"
-              },
+                "id": "w15-sun-s1-t1"
+              }
+            ]
+          },
+          {
+            "title": "Interview Mental Walkthrough",
+            "tasks": [
               {
                 "text": "Close your eyes; mentally walk through a full interview day:",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w15-sun-s0-t3"
+                "id": "w15-sun-s2-t0"
               },
               {
                 "text": "You're asked to design Twitter's feed. What's your first sentence?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w15-sun-s0-t4"
+                "id": "w15-sun-s2-t1"
               },
               {
                 "text": "You're given LeetCode #33. What do you say before coding?",
@@ -11711,35 +12046,40 @@ export const roadmap = {
                 ],
                 "leetcodeNum": 33,
                 "difficulty": null,
-                "id": "w15-sun-s0-t5"
+                "id": "w15-sun-s2-t2"
               },
               {
                 "text": "You're asked \"tell me about a failure.\" Which story do you tell?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w15-sun-s0-t6"
+                "id": "w15-sun-s2-t3"
               },
               {
                 "text": "You're asked about thread safety in a HashMap. What's your opening?",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w15-sun-s0-t7"
+                "id": "w15-sun-s2-t4"
               },
               {
                 "text": "This mental rehearsal reduces first-interview nerves significantly",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w15-sun-s0-t8"
-              },
+                "id": "w15-sun-s2-t5"
+              }
+            ]
+          },
+          {
+            "title": "Plan Week 16",
+            "tasks": [
               {
                 "text": "Week 16 is interview-mode readiness. If interviews are scheduled, Week 16 is your final prep. If not, use it to apply actively while staying sharp.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w15-sun-s0-t9"
+                "id": "w15-sun-s3-t0"
               }
             ]
           }
@@ -12035,7 +12375,7 @@ export const roadmap = {
         "isSunday": true,
         "sections": [
           {
-            "title": "Tasks",
+            "title": "Light DSA",
             "tasks": [
               {
                 "text": "Solve 2 problems you're most confident in — build confidence, not repair",
@@ -12050,1096 +12390,96 @@ export const roadmap = {
                 "leetcodeNum": null,
                 "difficulty": null,
                 "id": "w16-sun-s0-t1"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Final Cheat Sheet Pass",
+            "tasks": [
               {
                 "text": "Read your master cheat sheet one last time, front to back",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w16-sun-s0-t2"
+                "id": "w16-sun-s1-t0"
               },
               {
                 "text": "Don't re-read to learn — you already know this; read to reinforce retrieval cues",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w16-sun-s0-t3"
-              },
+                "id": "w16-sun-s1-t1"
+              }
+            ]
+          },
+          {
+            "title": "Mindset Preparation",
+            "tasks": [
               {
                 "text": "Write down: \"What am I walking in with?\" — list your strongest skills honestly",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w16-sun-s0-t4"
+                "id": "w16-sun-s2-t0"
               },
               {
                 "text": "Write down: \"What's my interview goal?\" — not \"get an offer\" (that's an outcome); the goal is \"show my real knowledge clearly and calmly\"",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w16-sun-s0-t5"
+                "id": "w16-sun-s2-t1"
               },
               {
                 "text": "Read Feynman's rule one more time: if you can't explain it simply, study it more. You've been doing that for 4 months.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w16-sun-s0-t6"
-              },
+                "id": "w16-sun-s2-t2"
+              }
+            ]
+          },
+          {
+            "title": "Final Admin",
+            "tasks": [
               {
                 "text": "Confirm all interview schedules, time zones, format (phone/video/onsite)",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w16-sun-s0-t7"
+                "id": "w16-sun-s3-t0"
               },
               {
                 "text": "Setup: stable internet, quiet room, working camera + mic tested, IDE ready with your preferred theme, drink of choice on the desk",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w16-sun-s0-t8"
+                "id": "w16-sun-s3-t1"
               },
               {
                 "text": "Sleep goal: 8h for 3 nights leading up to interview day",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w16-sun-s0-t9"
-              },
+                "id": "w16-sun-s3-t2"
+              }
+            ]
+          },
+          {
+            "title": "The Night Before",
+            "tasks": [
               {
                 "text": "Don't cram. Don't read new material. Skim your master cheat sheet lightly (20 min max) then put it away.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w16-sun-s0-t10"
+                "id": "w16-sun-s4-t0"
               },
               {
                 "text": "Do something you enjoy. You've put in 4 months of structured work. The preparation is done.",
                 "tags": [],
                 "leetcodeNum": null,
                 "difficulty": null,
-                "id": "w16-sun-s0-t11"
-              },
-              {
-                "text": "[ ] Write a multi-step Stream pipeline with groupingBy + downstream collector",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t12"
-              },
-              {
-                "text": "[ ] Explain Optional.orElseGet() vs orElse() — code example",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t13"
-              },
-              {
-                "text": "[ ] Write a sealed interface with exhaustive switch expression",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t14"
-              },
-              {
-                "text": "[ ] Explain virtual thread pinning — give 2 causes and 2 fixes",
-                "tags": [
-                  "Concurrency"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t15"
-              },
-              {
-                "text": "[ ] Explain StructuredTaskScope.ShutdownOnFailure — code example",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t16"
-              },
-              {
-                "text": "[ ] Explain volatile: what it guarantees and what it does NOT guarantee",
-                "tags": [
-                  "Concurrency"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t17"
-              },
-              {
-                "text": "[ ] Write a BoundedBlockingQueue using ReentrantLock + Condition",
-                "tags": [
-                  "Concurrency"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t18"
-              },
-              {
-                "text": "[ ] Explain ConcurrentHashMap Java 8 internals vs Java 7 segments",
-                "tags": [
-                  "Concurrency"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t19"
-              },
-              {
-                "text": "[ ] Explain G1GC region layout and how MaxGCPauseMillis works",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t20"
-              },
-              {
-                "text": "[ ] Read a thread dump and identify a deadlock cycle",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t21"
-              },
-              {
-                "text": "[ ] Singleton: write the Enum Singleton and explain why it beats DCL",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t22"
-              },
-              {
-                "text": "[ ] Builder: write a DatabaseConfig builder with mandatory + optional params",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t23"
-              },
-              {
-                "text": "[ ] Decorator: write a caching proxy using JDK Dynamic Proxy",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t24"
-              },
-              {
-                "text": "[ ] Observer: write a publisher + 2 subscribers with List<Observer>",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t25"
-              },
-              {
-                "text": "[ ] Strategy: replace an if-else payment chain with Strategy pattern",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t26"
-              },
-              {
-                "text": "[ ] Two Sum (HashMap, O(n))",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t27"
-              },
-              {
-                "text": "[ ] Best Time to Buy and Sell Stock (single pass)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t28"
-              },
-              {
-                "text": "[ ] Longest Substring Without Repeating (sliding window)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t29"
-              },
-              {
-                "text": "[ ] 3Sum (sort + two pointer + dedup)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t30"
-              },
-              {
-                "text": "[ ] Group Anagrams (HashMap sorted key)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t31"
-              },
-              {
-                "text": "[ ] Binary Search (both templates)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t32"
-              },
-              {
-                "text": "[ ] Search in Rotated Sorted Array",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t33"
-              },
-              {
-                "text": "[ ] Valid Parentheses (stack)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t34"
-              },
-              {
-                "text": "[ ] Daily Temperatures (monotonic stack)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t35"
-              },
-              {
-                "text": "[ ] Largest Rectangle in Histogram (monotonic stack)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t36"
-              },
-              {
-                "text": "[ ] Level Order Traversal (BFS with queue)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t37"
-              },
-              {
-                "text": "[ ] Number of Islands (BFS or DFS)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t38"
-              },
-              {
-                "text": "[ ] Explain @Transactional self-invocation problem — fix it",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t39"
-              },
-              {
-                "text": "[ ] Explain @Transactional propagation REQUIRED vs REQUIRES_NEW",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t40"
-              },
-              {
-                "text": "[ ] Write a JPQL query with JOIN FETCH to solve N+1",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t41"
-              },
-              {
-                "text": "[ ] Write a GlobalExceptionHandler with @RestControllerAdvice",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t42"
-              },
-              {
-                "text": "[ ] Write a @WebMvcTest with MockMvc + @MockBean",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t43"
-              },
-              {
-                "text": "[ ] Explain Spring AOP proxy types (JDK Dynamic vs CGLIB) and when each is used",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t44"
-              },
-              {
-                "text": "[ ] Explain at-least-once vs exactly-once — code strategies for each",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t45"
-              },
-              {
-                "text": "[ ] Explain the Outbox Pattern — why, how, what it prevents",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t46"
-              },
-              {
-                "text": "[ ] Explain consumer group partition assignment (one consumer per partition rule)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t47"
-              },
-              {
-                "text": "[ ] Write a @KafkaListener with manual ack + DLT handler",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t48"
-              },
-              {
-                "text": "[ ] Explain Kafka Streams KStream vs KTable semantic difference",
-                "tags": [
-                  "Kafka"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t49"
-              },
-              {
-                "text": "[ ] Explain liveness vs readiness probe — what happens when each fails?",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t50"
-              },
-              {
-                "text": "[ ] Explain HPA vs KEDA — when would you choose KEDA?",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t51"
-              },
-              {
-                "text": "[ ] Explain StatefulSet vs Deployment — 2 key differences",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t52"
-              },
-              {
-                "text": "[ ] Explain Helm chart structure — what does values.yaml do?",
-                "tags": [
-                  "K8s"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t53"
-              },
-              {
-                "text": "[ ] Explain OpenShift SCC — how does it differ from K8s PodSecurityAdmission?",
-                "tags": [
-                  "K8s"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t54"
-              },
-              {
-                "text": "[ ] Course Schedule (topological sort, cycle detection)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t55"
-              },
-              {
-                "text": "[ ] Clone Graph (DFS with HashMap)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t56"
-              },
-              {
-                "text": "[ ] Climbing Stairs + House Robber (DP 1D)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t57"
-              },
-              {
-                "text": "[ ] Coin Change (unbounded knapsack)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t58"
-              },
-              {
-                "text": "[ ] Longest Common Subsequence (2D DP table)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t59"
-              },
-              {
-                "text": "[ ] Partition Equal Subset Sum (0/1 knapsack)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t60"
-              },
-              {
-                "text": "[ ] Find Median from Data Stream (two heaps)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t61"
-              },
-              {
-                "text": "[ ] Merge K Sorted Lists (min-heap)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t62"
-              },
-              {
-                "text": "[ ] Implement Trie (TrieNode + children + isEndOfWord)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t63"
-              },
-              {
-                "text": "[ ] N-Queens (backtracking with HashSets for column, diag1, diag2)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t64"
-              },
-              {
-                "text": "[ ] Burst Balloons (interval DP — last-to-burst thinking)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t65"
-              },
-              {
-                "text": "[ ] URL Shortener (Base62, Redis cache, Kafka analytics, 302 vs 301)",
-                "tags": [
-                  "Kafka"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t66"
-              },
-              {
-                "text": "[ ] Notification System (Kafka fan-out, retry, DLT, idempotency)",
-                "tags": [
-                  "Kafka"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t67"
-              },
-              {
-                "text": "[ ] Key-Value Store (LSM Tree, consistent hashing, quorum, gossip)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t68"
-              },
-              {
-                "text": "[ ] Rate Limiter (Token Bucket algorithm, Redis Lua script, distributed)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t69"
-              },
-              {
-                "text": "[ ] Web Crawler (URL Frontier, Bloom filter, politeness, distributed workers)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t70"
-              },
-              {
-                "text": "[ ] Write a JwtFilter that validates Bearer token and sets SecurityContext",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t71"
-              },
-              {
-                "text": "[ ] Explain OAuth2 Authorization Code Flow with PKCE — 5 steps",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t72"
-              },
-              {
-                "text": "[ ] Explain @PreAuthorize vs @PostAuthorize with examples",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t73"
-              },
-              {
-                "text": "[ ] Explain Spring Security self-invocation problem with method security",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t74"
-              },
-              {
-                "text": "[ ] Explain JWT revocation problem and 2 workarounds",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t75"
-              },
-              {
-                "text": "[ ] Explain CAP: which real systems are CP and which are AP?",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t76"
-              },
-              {
-                "text": "[ ] Explain Raft leader election and quorum requirement",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t77"
-              },
-              {
-                "text": "[ ] Explain CRDT — what problem it solves, one example",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t78"
-              },
-              {
-                "text": "[ ] Explain 2PC: 2 phases, 2 failure modes, why not in microservices",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t79"
-              },
-              {
-                "text": "[ ] Explain Saga: Choreography vs Orchestration — scenario for each",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t80"
-              },
-              {
-                "text": "[ ] Explain read-your-writes consistency — how to implement with read replicas",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t81"
-              },
-              {
-                "text": "[ ] Meeting Rooms II (sort + min-heap of end times)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t82"
-              },
-              {
-                "text": "[ ] Merge Intervals (sort by start + merge condition)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t83"
-              },
-              {
-                "text": "[ ] Linked List Cycle II (Floyd's — find cycle start)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t84"
-              },
-              {
-                "text": "[ ] Sort List (merge sort on linked list)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t85"
-              },
-              {
-                "text": "[ ] Number of 1 Bits (n & (n-1) trick)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t86"
-              },
-              {
-                "text": "[ ] Find Duplicate Number (Floyd's on array as linked list)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t87"
-              },
-              {
-                "text": "[ ] Dijkstra's (min-heap + distance array)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t88"
-              },
-              {
-                "text": "[ ] Cheapest Flights K Stops (Bellman-Ford K rounds)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t89"
-              },
-              {
-                "text": "[ ] Minimum Spanning Tree (Prim's with min-heap or Kruskal's + Union-Find)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t90"
-              },
-              {
-                "text": "[ ] Twitter/X Timeline (Snowflake ID, fan-out hybrid, Redis Sorted Set)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t91"
-              },
-              {
-                "text": "[ ] Instagram Feed (pre-signed S3, CDN, fan-out on write vs read)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t92"
-              },
-              {
-                "text": "[ ] Payment System (idempotency key, Saga, ledger, reconciliation)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t93"
-              },
-              {
-                "text": "[ ] Autocomplete (Trie, prefix sharding, Redis cache, trending blend)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t94"
-              },
-              {
-                "text": "[ ] Real-Time Ride Sharing (Redis GeoHash, WebSocket, state machine)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t95"
-              },
-              {
-                "text": "[ ] Leadership / Technical Initiative (Story #1)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t96"
-              },
-              {
-                "text": "[ ] Conflict / Disagreement (Story #2)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t97"
-              },
-              {
-                "text": "[ ] Failure / Learning (Story #4)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t98"
-              },
-              {
-                "text": "[ ] Mentoring / Team Impact (Story #3)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t99"
-              },
-              {
-                "text": "[ ] Production Incident (Story #5)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t100"
-              },
-              {
-                "text": "[ ] Proactive Ownership (Story #6)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t101"
-              },
-              {
-                "text": "[ ] Cross-Team Influence (Story #7)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t102"
-              },
-              {
-                "text": "[ ] Performance Improvement (Story #8)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t103"
-              },
-              {
-                "text": "[ ] \"Tell me about yourself\" < 2 minutes — smooth delivery",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t104"
-              },
-              {
-                "text": "[ ] Ask 2–3 good questions to the interviewer (prepared, not generic)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t105"
-              },
-              {
-                "text": "[ ] \"Why this company\" — specific, not generic, for each target company",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t106"
-              },
-              {
-                "text": "[ ] During DSA: state approach before coding, speak aloud while coding, check edge cases, state complexity at end",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t107"
-              },
-              {
-                "text": "[ ] During HLD: ask clarifying questions first, estimate capacity, define APIs, draw diagram, justify choices, discuss failure scenarios",
-                "tags": [
-                  "HLD"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t108"
-              },
-              {
-                "text": "[ ] During Behavioral: STAR, \"I\" not \"we\", quantified results, answer the question asked",
-                "tags": [
-                  "STAR"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t109"
-              },
-              {
-                "text": "**Java 8–21 release notes**: docs.oracle.com/en/java/javase → Release Notes",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t110"
-              },
-              {
-                "text": "**Inside the JVM (Heap, GC)**: \"Java Performance\" by Scott Oaks (O'Reilly) — Chapters 5–8",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t111"
-              },
-              {
-                "text": "**Project Loom**: openjdk.org/projects/loom → JEP 444 (Virtual Threads)",
-                "tags": [
-                  "Concurrency"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t112"
-              },
-              {
-                "text": "**Effective Java 3rd Edition**: Bloch — Items 15–23 (Classes), 49–56 (Methods), 78–84 (Concurrency)",
-                "tags": [
-                  "Concurrency"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t113"
-              },
-              {
-                "text": "**jcmd reference**: baeldung.com/jcmd-command",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t114"
-              },
-              {
-                "text": "**Spring Boot Docs**: docs.spring.io/spring-boot/docs/current/reference/html",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t115"
-              },
-              {
-                "text": "**Spring Security Architecture**: spring.io/guides/topicals/spring-security-architecture",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t116"
-              },
-              {
-                "text": "**Spring Data JPA**: docs.spring.io/spring-data/jpa/docs/current/reference/html",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t117"
-              },
-              {
-                "text": "**Spring Boot Testing**: baeldung.com/spring-boot-testing",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t118"
-              },
-              {
-                "text": "**JWT with Spring Security**: github.com/jwtk/jjwt (JJWT library docs)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t119"
-              },
-              {
-                "text": "**Kafka Official Docs**: kafka.apache.org/documentation",
-                "tags": [
-                  "Kafka"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t120"
-              },
-              {
-                "text": "**Confluent Kafka Fundamentals** (free course): developer.confluent.io",
-                "tags": [
-                  "Kafka"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t121"
-              },
-              {
-                "text": "**Kafka: The Definitive Guide** (free PDF on Confluent): comprehensive reference",
-                "tags": [
-                  "Kafka"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t122"
-              },
-              {
-                "text": "**Spring Kafka Docs**: docs.spring.io/spring-kafka/docs/current/reference/html",
-                "tags": [
-                  "Kafka"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t123"
-              },
-              {
-                "text": "**Outbox Pattern**: microservices.io/patterns/data/transactional-outbox.html",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t124"
-              },
-              {
-                "text": "**Kubernetes Official Docs**: kubernetes.io/docs/home",
-                "tags": [
-                  "K8s"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t125"
-              },
-              {
-                "text": "**CKAD practice**: killer.sh (exam simulator — excellent for K8s concepts)",
-                "tags": [
-                  "K8s"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t126"
-              },
-              {
-                "text": "**OpenShift Docs**: docs.openshift.com",
-                "tags": [
-                  "K8s"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t127"
-              },
-              {
-                "text": "**Azure AKS Docs**: learn.microsoft.com/en-us/azure/aks",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t128"
-              },
-              {
-                "text": "**Helm Docs**: helm.sh/docs",
-                "tags": [
-                  "K8s"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t129"
-              },
-              {
-                "text": "**ByteByteGo System Design 101**: github.com/ByteByteGoHq/system-design-101 (GitHub — free)",
-                "tags": [
-                  "HLD"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t130"
-              },
-              {
-                "text": "**ByteByteGo Newsletter**: bytebytego.com (weekly system design content)",
-                "tags": [
-                  "HLD"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t131"
-              },
-              {
-                "text": "**Designing Data-Intensive Applications (DDIA)**: Martin Kleppmann — the most important book for HLD; focus Chapters 5–9",
-                "tags": [
-                  "HLD"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t132"
-              },
-              {
-                "text": "**High Scalability Blog**: highscalability.com — real-world architecture case studies",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t133"
-              },
-              {
-                "text": "**Engineering Blogs**: engineering.fb.com, netflixtechblog.com, engineering.atspotify.com",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t134"
-              },
-              {
-                "text": "**NeetCode.io**: neetcode.io — problem lists organized by pattern (use the Roadmap)",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t135"
-              },
-              {
-                "text": "**NeetCode YouTube**: youtube.com/@NeetCode — clean explanations for every LeetCode problem in this plan",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t136"
-              },
-              {
-                "text": "**LeetCode**: leetcode.com — target the NeetCode 150 list; track with this document's tracker",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t137"
-              },
-              {
-                "text": "**Grokking DSA Patterns**: educative.io/courses/grokking-the-coding-interview — pattern-based approach",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t138"
-              },
-              {
-                "text": "**Competitive Programmer's Handbook**: cses.fi/book/book.pdf (free PDF) — deeper algorithm theory",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t139"
-              },
-              {
-                "text": "**Refactoring.Guru**: refactoring.guru/design-patterns — clean visual explanations with Java code for all 23 GoF patterns",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t140"
-              },
-              {
-                "text": "**Head First Design Patterns** (O'Reilly): excellent for intuition; Chapters 1–14",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t141"
-              },
-              {
-                "text": "**LLD GitHub repository**: github.com/ashishps1/awesome-low-level-design — Java implementations of common LLD problems",
-                "tags": [
-                  "LLD"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t142"
-              },
-              {
-                "text": "**Amazon Leadership Principles**: amazon.jobs/content/en/our-workplace/leadership-principles — study if targeting Amazon or Amazon-style companies",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t143"
-              },
-              {
-                "text": "**STAR method guide**: themuse.com/advice/star-interview-method",
-                "tags": [
-                  "STAR"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t144"
-              },
-              {
-                "text": "**Pramp**: pramp.com — free peer mock interviews (DSA + behavioral)",
-                "tags": [
-                  "STAR"
-                ],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t145"
-              },
-              {
-                "text": "**Interviewing.io**: interviewing.io — anonymous mock interviews with engineers from top companies",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t146"
-              },
-              {
-                "text": "**Micrometer Docs**: micrometer.io/docs/reference/java",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t147"
-              },
-              {
-                "text": "**Prometheus + Spring Boot**: docs.spring.io/spring-boot/docs/current/reference/html/actuator.html",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t148"
-              },
-              {
-                "text": "**Java Flight Recorder Guide**: baeldung.com/java-flight-recorder-monitoring",
-                "tags": [],
-                "leetcodeNum": null,
-                "difficulty": null,
-                "id": "w16-sun-s0-t149"
+                "id": "w16-sun-s4-t1"
               }
             ]
           }
