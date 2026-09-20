@@ -18,7 +18,7 @@ export default function SubtaskRow({ topicId, subtask }) {
   const tier = TIER_STYLES[subtask.tier];
 
   return (
-    <div className="flex items-center gap-3 py-2 group">
+    <div className="flex items-center gap-3 py-2 group transition-colors duration-150 hover:bg-[var(--bg-raised)] -mx-2 px-2 rounded-lg">
       <div className="flex-1 min-w-0 flex items-center gap-2">
         <span className="text-sm leading-relaxed" style={{ color: 'var(--text-2)' }}>{subtask.text}</span>
         <span className="text-[9px] px-1.5 py-0.5 rounded font-semibold shrink-0"
@@ -28,17 +28,20 @@ export default function SubtaskRow({ topicId, subtask }) {
       </div>
 
       <div className="flex items-center rounded-full p-0.5 shrink-0" style={{ background: 'var(--bg-raised)' }}>
-        {STATES.map(s => (
-          <button key={s.key}
-            onClick={() => setSubtaskState(topicId, subtask.id, s.key)}
-            className="text-[10px] px-2 py-1 rounded-full font-medium transition-all duration-150"
-            style={{
-              background: current === s.key ? s.bg : 'transparent',
-              color: current === s.key ? s.text : 'var(--text-4)',
-            }}>
-            {s.label}
-          </button>
-        ))}
+        {STATES.map(s => {
+          const isSelected = current === s.key;
+          return (
+            <button key={s.key}
+              onClick={() => setSubtaskState(topicId, subtask.id, s.key)}
+              className={`text-[10px] px-2 py-1 rounded-full font-medium
+                         transition-all duration-150 ease-out hover:scale-105 active:scale-90
+                         ${isSelected ? 'shadow-sm' : 'hover:bg-white/60'}`}
+              style={isSelected ? { background: s.bg, color: s.text } : { color: 'var(--text-4)' }}
+            >
+              {s.label}
+            </button>
+          );
+        })}
       </div>
     </div>
   );

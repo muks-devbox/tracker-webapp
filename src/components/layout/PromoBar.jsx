@@ -4,14 +4,16 @@ import { useProgress } from '../../hooks/useProgress';
 export default function PromoBar() {
   const { getStreakInfo, getOverallStats } = useProgress();
   const [dismissed, setDismissed] = useState(false);
+  const [closing, setClosing] = useState(false);
 
   useEffect(() => {
     setDismissed(sessionStorage.getItem('promoBarDismissed') === '1');
   }, []);
 
   const dismiss = () => {
-    setDismissed(true);
+    setClosing(true);
     sessionStorage.setItem('promoBarDismissed', '1');
+    setTimeout(() => setDismissed(true), 200);
   };
 
   if (dismissed) return null;
@@ -31,11 +33,17 @@ export default function PromoBar() {
   }
 
   return (
-    <div className="flex items-center justify-between gap-3 px-4 py-2 text-sm"
-      style={{ background: 'var(--accent)', color: '#f0faf5' }}>
+    <div
+      className={`flex items-center justify-between gap-3 px-4 py-2 text-sm animate-bar-enter
+                 transition-all duration-200 ease-in ${closing ? 'opacity-0 -translate-y-2' : ''}`}
+      style={{ background: 'var(--accent)', color: '#f0faf5' }}
+    >
       <span className="truncate">{message}</span>
-      <button onClick={dismiss} className="shrink-0 opacity-80 hover:opacity-100 transition-opacity"
-        aria-label="Dismiss">✕</button>
+      <button onClick={dismiss}
+        className="shrink-0 opacity-80 hover:opacity-100 transition-all duration-150 hover:rotate-90 active:scale-75"
+        aria-label="Dismiss">
+        ✕
+      </button>
     </div>
   );
 }

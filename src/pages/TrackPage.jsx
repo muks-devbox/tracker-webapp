@@ -27,7 +27,9 @@ export default function TrackPage() {
   });
 
   return (
-    <div className="max-w-2xl mx-auto">
+    // key={trackId} forces a clean remount on every track switch, so the
+    // page-enter animation replays each time instead of only on first load.
+    <div key={trackId} className="max-w-2xl mx-auto animate-page-enter">
       <div className="mb-1 text-[10px] font-semibold uppercase tracking-widest" style={{ color: 'var(--accent)' }}>
         {track.category}
       </div>
@@ -40,11 +42,11 @@ export default function TrackPage() {
       <FilterTabs active={filter} onChange={setFilter} />
 
       {filteredTopics.length === 0 ? (
-        <div className="text-sm text-center py-10" style={{ color: 'var(--text-4)' }}>
+        <div className="text-sm text-center py-10 animate-pop" style={{ color: 'var(--text-4)' }}>
           Nothing matches this filter.
         </div>
       ) : (
-        filteredTopics.map(topic => <TopicCard key={topic.topicId} topic={topic} />)
+        filteredTopics.map((topic, i) => <TopicCard key={topic.topicId} topic={topic} index={i} />)
       )}
     </div>
   );

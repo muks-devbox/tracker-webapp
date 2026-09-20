@@ -30,6 +30,7 @@
 
   --shadow-card: 0 1px 2px rgba(28,26,20,0.04), 0 1px 1px rgba(28,26,20,0.03);
   --shadow-raised: 0 8px 24px rgba(28,26,20,0.08), 0 2px 6px rgba(28,26,20,0.05);
+  --shadow-hover: 0 4px 14px rgba(28,26,20,0.09), 0 1px 3px rgba(28,26,20,0.06);
 }
 
 body { background: var(--bg-paper); font-family: var(--font-sans); }
@@ -38,3 +39,34 @@ body { background: var(--bg-paper); font-family: var(--font-sans); }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
 ::selection { background: var(--accent-light); }
+
+/* Motion */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes popIn {
+  0%   { opacity: 0; transform: scale(0.94); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmerPulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.55; }
+}
+
+.animate-page-enter { animation: fadeSlideUp 0.32s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-card-enter { animation: fadeSlideUp 0.36s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-bar-enter   { animation: fadeSlideDown 0.28s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-pop          { animation: popIn 0.22s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animate-pulse-soft   { animation: shimmerPulse 1.8s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-page-enter, .animate-card-enter, .animate-bar-enter, .animate-pop, .animate-pulse-soft {
+    animation: none !important;
+  }
+  * { transition-duration: 0.01ms !important; }
+}

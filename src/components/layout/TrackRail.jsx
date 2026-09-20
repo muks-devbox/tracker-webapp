@@ -18,13 +18,19 @@ export default function TrackRail({ onClose }) {
           <span className="text-sm font-semibold" style={{ fontFamily: 'var(--font-serif)', color: 'var(--text-1)' }}>
             All tracks
           </span>
-          {onClose && <button onClick={onClose} className="md:hidden text-sm" style={{ color: 'var(--text-3)' }}>✕</button>}
+          {onClose && (
+            <button onClick={onClose}
+              className="md:hidden text-sm transition-transform duration-150 hover:scale-110 active:scale-90"
+              style={{ color: 'var(--text-3)' }}>
+              ✕
+            </button>
+          )}
         </div>
         <div className="flex items-center justify-between text-xs mb-1.5" style={{ color: 'var(--text-3)' }}>
           <span>Overall</span><span className="font-mono">{overall.solidPlus}/{overall.total}</span>
         </div>
         <div className="h-1.5 rounded-full overflow-hidden" style={{ background: 'var(--bg-raised)' }}>
-          <div className="h-full rounded-full transition-all duration-700"
+          <div className="h-full rounded-full transition-[width] duration-700 ease-out"
             style={{ width: `${overall.pct}%`, background: 'var(--accent)' }} />
         </div>
       </div>
@@ -38,15 +44,24 @@ export default function TrackRail({ onClose }) {
             {tracks.map(track => {
               const stats = getTrackStats(track);
               return (
-                <NavLink key={track.trackId} to={`/track/${track.trackId}`} onClick={onClose}
-                  className="flex items-center justify-between gap-2 px-2.5 py-2 rounded-lg mb-0.5 transition-colors no-underline"
-                  style={({isActive}) => ({
-                    background: isActive ? 'var(--accent-light)' : 'transparent',
-                    color: isActive ? 'var(--accent)' : 'var(--text-2)',
-                    fontWeight: isActive ? 600 : 400,
-                  })}>
+                <NavLink
+                  key={track.trackId}
+                  to={`/track/${track.trackId}`}
+                  onClick={onClose}
+                  className={({ isActive }) =>
+                    `group flex items-center justify-between gap-2 px-2.5 py-2 rounded-lg mb-0.5 no-underline
+                     transition-all duration-150 ease-out hover:translate-x-0.5
+                     ${isActive ? '' : 'hover:bg-[var(--bg-raised)]'}`
+                  }
+                  style={({ isActive }) =>
+                    isActive
+                      ? { background: 'var(--accent-light)', color: 'var(--accent)', fontWeight: 600 }
+                      : { color: 'var(--text-2)', fontWeight: 400 }
+                  }
+                >
                   <span className="text-sm truncate">{track.title}</span>
-                  <span className="text-[10px] font-mono shrink-0" style={{ color: stats.pct === 100 ? 'var(--accent)' : 'var(--text-4)' }}>
+                  <span className="text-[10px] font-mono shrink-0 transition-transform duration-200 group-hover:scale-110"
+                    style={{ color: stats.pct === 100 ? 'var(--accent)' : 'var(--text-4)' }}>
                     {stats.pct === 100 ? '✓' : `${stats.solidPlus}/${stats.total}`}
                   </span>
                 </NavLink>
