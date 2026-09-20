@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useProgress } from '../../hooks/useProgress';
 import { formatStartedAt, isoWeekKey } from '../../services/progressService';
 
@@ -73,7 +74,7 @@ export default function StreakHistoryModal({ onClose }) {
     return show ? label : '';
   });
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto animate-fade-in"
       style={{ background: 'rgba(28,26,20,0.35)', backdropFilter: 'blur(2px)' }}
@@ -190,6 +191,7 @@ export default function StreakHistoryModal({ onClose }) {
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
