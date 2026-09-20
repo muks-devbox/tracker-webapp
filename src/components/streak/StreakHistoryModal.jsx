@@ -27,7 +27,7 @@ function cellShade(entry) {
 }
 
 export default function StreakHistoryModal({ onClose }) {
-  const { activity, profile, getStreakInfo, togglePause } = useProgress();
+  const { activity = {}, profile = {}, getStreakInfo, togglePause } = useProgress();
   const { weeks, isPausedThisWeek } = getStreakInfo();
   const startedLabel = formatStartedAt(profile.startedAt);
   const pausedWeeks = new Set(profile.pausedWeeks ?? []);

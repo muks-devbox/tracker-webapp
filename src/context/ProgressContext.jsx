@@ -173,7 +173,7 @@ export function ProgressProvider({ children }) {
 
   return (
     <ProgressContext.Provider value={{
-      progress, loaded, profile,
+      progress, loaded, profile, activity,
       setSubtaskState, updateNotes, togglePause,
       getTopicStats, getTrackStats, getOverallStats,
       getShakyItems, getStreakInfo, getSparklineSeries,
