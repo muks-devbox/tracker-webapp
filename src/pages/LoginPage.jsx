@@ -4,36 +4,29 @@ export default function LoginPage() {
   const { signIn, authError } = useAuth();
 
   return (
-    <div className="min-h-screen flex items-center justify-center"
-      style={{ background: 'var(--bg-app)' }}>
+    <div className="min-h-screen flex items-center justify-center" style={{ background: 'var(--bg-paper)' }}>
       <div className="w-full max-w-sm rounded-2xl p-10 text-center"
-        style={{ background: 'var(--bg-base)', border: '1px solid var(--border)' }}>
+        style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', boxShadow: 'var(--shadow-raised)' }}>
 
         <div className="text-4xl mb-4">🎯</div>
-        <h1 className="text-xl font-semibold mb-1" style={{ color: 'var(--text-1)' }}>
-          Interview Prep Tracker
+        <h1 className="text-xl font-semibold mb-1" style={{ fontFamily: 'var(--font-serif)', color: 'var(--text-1)' }}>
+          Interview Prep
         </h1>
         <p className="text-sm mb-8" style={{ color: 'var(--text-3)' }}>
-          16-Week Senior Java Backend Roadmap
+          Untimed, topic-track checklist
         </p>
 
         {authError && (
           <div className="text-sm rounded-lg px-4 py-3 mb-6"
-            style={{ background: 'var(--tag-hard-bg, #fef2f2)',
-                     color: 'var(--tag-hard-text, #dc2626)',
-                     border: '1px solid var(--tag-hard-border, #fecaca)' }}>
+            style={{ background: 'var(--state-shaky-bg)', color: 'var(--state-shaky-text)' }}>
             {authError}
           </div>
         )}
 
         <button
           onClick={signIn}
-          className="w-full flex items-center justify-center gap-3 font-medium
-                     py-3 px-4 rounded-xl transition-colors cursor-pointer"
-          style={{ background: 'var(--bg-raised)', color: 'var(--text-1)',
-                   border: '1px solid var(--border)' }}
-          onMouseEnter={e => e.currentTarget.style.background = 'var(--bg-overlay)'}
-          onMouseLeave={e => e.currentTarget.style.background = 'var(--bg-raised)'}
+          className="w-full flex items-center justify-center gap-3 font-medium py-3 px-4 rounded-xl transition-colors cursor-pointer"
+          style={{ background: 'var(--bg-raised)', color: 'var(--text-1)', border: '1px solid var(--border)' }}
         >
           <GoogleIcon />
           Sign in with Google
