@@ -1,10 +1,15 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useProgress } from '../../hooks/useProgress';
+import { formatStartedAt } from '../../services/progressService';
+import StreakHistoryModal from '../streak/StreakHistoryModal';
 import roadmap from '../../data/roadmap';
 
 export default function TrackRail({ onClose }) {
-  const { getTrackStats, getOverallStats } = useProgress();
+  const { getTrackStats, getOverallStats, profile } = useProgress();
   const overall = getOverallStats();
+  const startedLabel = formatStartedAt(profile.startedAt);
+  const [historyOpen, setHistoryOpen] = useState(false);
 
   const byCategory = roadmap.tracks.reduce((acc, t) => {
     (acc[t.category] = acc[t.category] || []).push(t);
@@ -33,6 +38,15 @@ export default function TrackRail({ onClose }) {
           <div className="h-full rounded-full transition-[width] duration-700 ease-out"
             style={{ width: `${overall.pct}%`, background: 'var(--accent)' }} />
         </div>
+        {startedLabel && (
+          <button
+            onClick={() => setHistoryOpen(true)}
+            className="text-[10px] mt-2 transition-colors duration-150 hover:underline"
+            style={{ color: 'var(--text-4)' }}
+          >
+            Tracking since {startedLabel} · view history
+          </button>
+        )}
       </div>
 
       <nav className="flex-1 overflow-y-auto p-2 pt-3">
@@ -70,6 +84,7 @@ export default function TrackRail({ onClose }) {
           </div>
         ))}
       </nav>
+      {historyOpen && <StreakHistoryModal onClose={() => setHistoryOpen(false)} />}
     </aside>
   );
 }

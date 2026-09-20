@@ -1,11 +1,14 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import { useProgress } from '../../hooks/useProgress';
+import StreakHistoryModal from '../streak/StreakHistoryModal';
 
 export default function TopBar({ onMenuClick }) {
   const { user, signOut } = useAuth();
-  const { getStreakInfo, togglePause } = useProgress();
+  const { getStreakInfo } = useProgress();
   const { weeks, isPausedThisWeek } = getStreakInfo();
+  const [historyOpen, setHistoryOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-20 px-4 py-3 flex items-center gap-4 animate-bar-enter"
@@ -55,7 +58,7 @@ export default function TopBar({ onMenuClick }) {
       </nav>
 
       <div className="flex items-center gap-3 ml-auto">
-        <button onClick={togglePause}
+        <button onClick={() => setHistoryOpen(true)}
           className="flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full
                      transition-all duration-150 hover:scale-105 active:scale-95"
           style={{
@@ -63,7 +66,7 @@ export default function TopBar({ onMenuClick }) {
             color: isPausedThisWeek ? 'var(--text-3)' : 'var(--accent)',
             border: `1px solid ${isPausedThisWeek ? 'var(--border-strong)' : 'var(--accent-border)'}`,
           }}
-          title={isPausedThisWeek ? "Resume streak tracking" : "Pause this week (won't break your streak)"}>
+          title="View streak history">
           <span className={isPausedThisWeek ? '' : 'animate-pulse-soft'}>{isPausedThisWeek ? '⏸' : '🔥'}</span>
           <span className="font-mono font-semibold">{weeks}</span>
         </button>
@@ -77,6 +80,8 @@ export default function TopBar({ onMenuClick }) {
           Sign out
         </button>
       </div>
+
+      {historyOpen && <StreakHistoryModal onClose={() => setHistoryOpen(false)} />}
     </header>
   );
 }

@@ -53,6 +53,12 @@ body { background: var(--bg-paper); font-family: var(--font-sans); }
   0%   { opacity: 0; transform: scale(0.94); }
   100% { opacity: 1; transform: scale(1); }
 }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.animate-fade-in { animation: fadeIn 0.18s ease-out both; }
+
 @keyframes shimmerPulse {
   0%, 100% { opacity: 1; }
   50%      { opacity: 0.55; }
@@ -65,7 +71,7 @@ body { background: var(--bg-paper); font-family: var(--font-sans); }
 .animate-pulse-soft   { animation: shimmerPulse 1.8s ease-in-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-page-enter, .animate-card-enter, .animate-bar-enter, .animate-pop, .animate-pulse-soft {
+  .animate-page-enter, .animate-card-enter, .animate-bar-enter, .animate-pop, .animate-pulse-soft, .animate-fade-in {
     animation: none !important;
   }
   * { transition-duration: 0.01ms !important; }

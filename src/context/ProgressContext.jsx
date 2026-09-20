@@ -5,6 +5,7 @@ import {
   saveTopicNotes as apiSaveTopicNotes,
   subscribeToActivity, recordActivity,
   subscribeToUserProfile, toggleCurrentWeekPause,
+  ensureStartedAt,
   isoWeekKey,
 } from '../services/progressService';
 import roadmap from '../data/roadmap';
@@ -21,11 +22,19 @@ export function ProgressProvider({ children }) {
   const [loaded, setLoaded]         = useState(false);
   const notesTimers = useRef({});
 
+  const startedAtRequested = useRef(false);
+
   useEffect(() => {
     if (!user) return;
     const unsub1 = subscribeToProgress(user.uid, (d) => { setProgress(d); setLoaded(true); }, console.error);
     const unsub2 = subscribeToActivity(user.uid, setActivity, console.error);
-    const unsub3 = subscribeToUserProfile(user.uid, setProfile, console.error);
+    const unsub3 = subscribeToUserProfile(user.uid, (p) => {
+      setProfile(p);
+      if (!p.startedAt && !startedAtRequested.current) {
+        startedAtRequested.current = true;
+        ensureStartedAt(user.uid);
+      }
+    }, console.error);
     return () => { unsub1(); unsub2(); unsub3(); };
   }, [user]);
 

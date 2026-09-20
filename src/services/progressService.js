@@ -76,6 +76,19 @@ export async function recordActivity(userId, leveledUpDelta = 0) {
   }
 }
 
+// ── Start date (set once, never overwritten) ────────────────────────────────
+export async function ensureStartedAt(userId) {
+  const ref = doc(db, 'users', userId);
+  try {
+    const snap = await getDoc(ref);
+    if (!snap.exists() || !snap.data().startedAt) {
+      await setDoc(ref, { startedAt: serverTimestamp() }, { merge: true });
+    }
+  } catch (err) {
+    console.error('ensureStartedAt failed:', err);
+  }
+}
+
 // ── User profile (streak pause) ─────────────────────────────────────────────
 export function subscribeToUserProfile(userId, onData, onError) {
   const ref = doc(db, 'users', userId);
@@ -91,4 +104,10 @@ export async function toggleCurrentWeekPause(userId, pausedWeeks) {
     ? pausedWeeks.filter(w => w !== wk)
     : [...pausedWeeks, wk];
   await setDoc(ref, { pausedWeeks: next }, { merge: true });
+}
+
+// Firestore Timestamp -> "Sep 20, 2026". Null while the write is pending.
+export function formatStartedAt(ts) {
+  if (!ts || typeof ts.toDate !== 'function') return null;
+  return ts.toDate().toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
 }
