@@ -13,7 +13,7 @@ function dayKeyOf(date) {
   return date.toISOString().slice(0, 10);
 }
 
-const WEEKS_BACK = 14;
+const MAX_WEEKS = 52; // safety cap for long-term users; grid scrolls horizontally
 const ROW_LABELS = ['Mon', '', 'Wed', '', 'Fri', '', 'Sun'];
 const MONTH_FMT = { month: 'short' };
 
@@ -41,17 +41,25 @@ export default function StreakHistoryModal({ onClose }) {
   const today = new Date();
   const thisMonday = mondayOf(today);
 
+  // Grid starts at the week you actually began tracking — never pads backward
+  // into weeks before startedAt with meaningless empty history.
+  const startDate = profile.startedAt?.toDate ? profile.startedAt.toDate() : today;
+  const startMonday = mondayOf(startDate);
+  const rawSpan = Math.round((thisMonday - startMonday) / (7 * 86400000)) + 1;
+  const weeksToShow = Math.min(Math.max(rawSpan, 1), MAX_WEEKS);
+
   const columns = [];
-  for (let c = 0; c < WEEKS_BACK; c++) {
+  for (let c = 0; c < weeksToShow; c++) {
     const colMonday = new Date(thisMonday);
-    colMonday.setUTCDate(colMonday.getUTCDate() - (WEEKS_BACK - 1 - c) * 7);
+    colMonday.setUTCDate(colMonday.getUTCDate() - (weeksToShow - 1 - c) * 7);
     const wk = isoWeekKey(colMonday);
     const days = [];
     for (let r = 0; r < 7; r++) {
       const d = new Date(colMonday);
       d.setUTCDate(d.getUTCDate() + r);
       const isFuture = d > today;
-      days.push({ date: d, key: dayKeyOf(d), isFuture });
+      const beforeStart = d < mondayOf(startDate);
+      days.push({ date: d, key: dayKeyOf(d), isFuture, beforeStart });
     }
     columns.push({ monday: colMonday, weekKey: wk, days, isPaused: pausedWeeks.has(wk) });
   }
@@ -67,12 +75,12 @@ export default function StreakHistoryModal({ onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto animate-fade-in"
       style={{ background: 'rgba(28,26,20,0.35)', backdropFilter: 'blur(2px)' }}
       onClick={onClose}
     >
       <div
-        className="w-full max-w-lg rounded-2xl p-5 animate-pop"
+        className="w-full max-w-lg rounded-2xl p-5 my-8 max-h-[85vh] overflow-y-auto animate-pop"
         style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', boxShadow: 'var(--shadow-raised)' }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -120,8 +128,10 @@ export default function StreakHistoryModal({ onClose }) {
                     const entry = activity[day.key];
                     const shade = day.isFuture
                       ? { bg: 'transparent', border: '1px dashed var(--border)' }
+                      : day.beforeStart
+                      ? { bg: 'transparent', border: '1px solid transparent' }
                       : cellShade(entry);
-                    const tooltip = day.isFuture
+                    const tooltip = (day.isFuture || day.beforeStart)
                       ? ''
                       : `${day.date.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}` +
                         (entry?.touched ? ` — ${entry.leveledUp || 0} leveled up` : ' — no activity');
