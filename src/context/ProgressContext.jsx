@@ -20,8 +20,6 @@ export function ProgressProvider({ children }) {
   const [activity, setActivity]     = useState({});   // dayKey -> { touched, leveledUp }
   const [profile, setProfile]       = useState({ pausedWeeks: [] });
   const [loaded, setLoaded]         = useState(false);
-  const notesTimers = useRef({});
-
   const startedAtRequested = useRef(false);
 
   useEffect(() => {
@@ -64,14 +62,21 @@ export function ProgressProvider({ children }) {
     }
   }, [user, progress]);
 
-  const updateNotes = useCallback((topicId, notes) => {
+  // Explicit save (triggered by the Notes field's Save button, not per
+  // keystroke) — optimistic update with rollback on failure, same pattern
+  // as setSubtaskState.
+  const saveNotes = useCallback(async (topicId, notes) => {
     if (!user) return;
+    const prevNotes = progress[topicId]?.notes ?? '';
     setProgress(prev => ({ ...prev, [topicId]: { ...(prev[topicId] ?? {}), notes } }));
-    clearTimeout(notesTimers.current[topicId]);
-    notesTimers.current[topicId] = setTimeout(() => {
-      apiSaveTopicNotes(user.uid, topicId, notes).catch(console.error);
-    }, 1500);
-  }, [user]);
+    try {
+      await apiSaveTopicNotes(user.uid, topicId, notes);
+    } catch (err) {
+      console.error(err);
+      setProgress(prev => ({ ...prev, [topicId]: { ...(prev[topicId] ?? {}), notes: prevNotes } }));
+      throw err; // let the caller (NotesField) know the save failed
+    }
+  }, [user, progress]);
 
   const togglePause = useCallback(() => {
     if (!user) return;
@@ -174,7 +179,7 @@ export function ProgressProvider({ children }) {
   return (
     <ProgressContext.Provider value={{
       progress, loaded, profile, activity,
-      setSubtaskState, updateNotes, togglePause,
+      setSubtaskState, saveNotes, togglePause,
       getTopicStats, getTrackStats, getOverallStats,
       getShakyItems, getStreakInfo, getSparklineSeries,
     }}>

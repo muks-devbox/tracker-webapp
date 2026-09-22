@@ -1,5 +1,5 @@
 import {
-  doc, updateDoc, setDoc, getDoc,
+  doc, setDoc, getDoc,
   collection, onSnapshot,
   serverTimestamp,
 } from 'firebase/firestore';
@@ -25,29 +25,22 @@ export function subscribeToProgress(userId, onData, onError) {
   }, onError);
 }
 
+// IMPORTANT: subtask IDs contain dots (e.g. "concurrency.virtual-threads.foo").
+// updateDoc's dot-notation field paths treat every dot as a nested-map
+// separator, so a string key like `states.${subtaskId}` silently writes a
+// deeply nested map instead of one flat key. setDoc + merge:true does NOT
+// have this problem — object keys are always taken literally, dots and all.
 export async function setSubtaskState(userId, topicId, subtaskId, state) {
   const ref = doc(db, 'users', userId, 'progress', topicId);
-  try {
-    await updateDoc(ref, {
-      [`states.${subtaskId}`]: state,
-      updatedAt: serverTimestamp(),
-    });
-  } catch (err) {
-    if (err.code === 'not-found') {
-      await setDoc(ref, { states: { [subtaskId]: state }, notes: '', updatedAt: serverTimestamp() });
-    } else throw err;
-  }
+  await setDoc(ref, {
+    states: { [subtaskId]: state },
+    updatedAt: serverTimestamp(),
+  }, { merge: true });
 }
 
 export async function saveTopicNotes(userId, topicId, notes) {
   const ref = doc(db, 'users', userId, 'progress', topicId);
-  try {
-    await updateDoc(ref, { notes, updatedAt: serverTimestamp() });
-  } catch (err) {
-    if (err.code === 'not-found') {
-      await setDoc(ref, { notes, states: {}, updatedAt: serverTimestamp() });
-    } else throw err;
-  }
+  await setDoc(ref, { notes, updatedAt: serverTimestamp() }, { merge: true });
 }
 
 // ── Activity (one doc per day touched — powers streak + sparklines) ────────

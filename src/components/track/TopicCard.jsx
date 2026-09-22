@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useProgress } from '../../hooks/useProgress';
 import SubtaskRow from './SubtaskRow';
+import NotesField from './NotesField';
 
 export default function TopicCard({ topic, index = 0 }) {
   const [open, setOpen] = useState(false);
-  const { progress, getTopicStats, updateNotes } = useProgress();
+  const { progress, getTopicStats } = useProgress();
   const stats = getTopicStats(topic.topicId, topic.subtasks);
   const notes = progress[topic.topicId]?.notes ?? '';
   const allDone = stats.total > 0 && stats.solidPlus === stats.total;
@@ -58,17 +59,7 @@ export default function TopicCard({ topic, index = 0 }) {
             <div className="pt-1 divide-y" style={{ borderColor: 'var(--border)' }}>
               {topic.subtasks.map(sub => <SubtaskRow key={sub.id} topicId={topic.topicId} subtask={sub} />)}
             </div>
-            <div className="mt-3">
-              <textarea
-                defaultValue={notes}
-                onChange={e => updateNotes(topic.topicId, e.target.value)}
-                placeholder="Notes…"
-                rows={2}
-                className="w-full rounded-lg px-3 py-2 text-sm resize-none transition-colors duration-150
-                           focus:outline-none focus:border-[var(--accent)]"
-                style={{ background: 'var(--bg-raised)', border: '1px solid var(--border)', color: 'var(--text-2)' }}
-              />
-            </div>
+            <NotesField topicId={topic.topicId} notes={notes} />
           </div>
         </div>
       </div>
