@@ -20,6 +20,11 @@
   --accent-light: #e6f2ec;
   --accent-border:#bfe0d1;
 
+  --note-bg:      #fdf6e9;
+  --note-border:  #ecdcb3;
+  --note-accent:  #a8791f;
+  --note-accent-bg: #f7ecd4;
+
   --tier-core-bg:    #eef2fb; --tier-core-text:    #3a5ba8; --tier-core-border:    #c9d6f0;
   --tier-deep-bg:    #f7eefb; --tier-deep-text:    #8536a8; --tier-deep-border:    #e2c9f0;
   --tier-stretch-bg: #fbf3ee; --tier-stretch-text: #b5652b; --tier-stretch-border: #f0d9c9;
